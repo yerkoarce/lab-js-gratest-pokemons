@@ -225,8 +225,6 @@ Note: All pokemons have a `weight` attribute. You moght need to use that
 
   
 
-If two movies have the same year, order them in alphabetical order by their title! :heavy_check_mark:
-
   
 
 **:bulb: Make sure not to mutate the original array :wink:**

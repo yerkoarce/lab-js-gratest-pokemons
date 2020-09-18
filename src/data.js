@@ -1,2969 +1,4620 @@
-let movies = [
-    {
-      "title": "The Shawshank Redemption",
-      "year": 1994,
-      "director": "Frank Darabont",
-      "duration": "2h 22min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 9.3
-    },
-    {
-      "title": "The Godfather",
-      "year": 1972,
-      "director": "Francis Ford Coppola",
-      "duration": "2h 55min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 9.2
-    },
-    {
-      "title": "The Godfather: Part II",
-      "year": 1974,
-      "director": "Francis Ford Coppola",
-      "duration": "3h 22min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 9
-    },
-    {
-      "title": "The Dark Knight",
-      "year": 2008,
-      "director": "Christopher Nolan",
-      "duration": "2h 32min",
-      "genre": [
-        "Action",
-        "Crime",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 9
-    },
-    {
-      "title": "12 Angry Men",
-      "year": 1957,
-      "director": "Sidney Lumet",
-      "duration": "1h 36min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.9
-    },
-    {
-      "title": "Schindler\"s List",
-      "year": 1993,
-      "director": "Steven Spielberg",
-      "duration": "3h 15min",
-      "genre": [
-        "Biography",
-        "Drama",
-        "History"
-      ],
-      "rate": 8.9
-    },
-    {
-      "title": "Pulp Fiction",
-      "year": 1994,
-      "director": "Quentin Tarantino",
-      "duration": "2h 34min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.9
-    },
-    {
-      "title": "The Lord of the Rings: The Return of the King",
-      "year": 2003,
-      "director": "Peter Jackson",
-      "duration": "3h 21min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "Fantasy"
-      ],
-      "rate": 8.9
-    },
-    {
-      "title": "Il buono, il brutto, il cattivo",
-      "year": 1966,
-      "director": "Sergio Leone",
-      "duration": "3h 2min",
-      "genre": [
-        "Western"
-      ],
-      "rate": 8.9
-    },
-    {
-      "title": "Fight Club",
-      "year": 1999,
-      "director": "David Fincher",
-      "duration": "2h 19min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.8
-    },
-    {
-      "title": "The Lord of the Rings: The Fellowship of the Ring",
-      "year": 2001,
-      "director": "Peter Jackson",
-      "duration": "2h 58min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "Fantasy"
-      ],
-      "rate": 8.8
-    },
-    {
-      "title": "Forrest Gump",
-      "year": 1994,
-      "director": "Robert Zemeckis",
-      "duration": "2h 22min",
-      "genre": [
-        "Comedy",
-        "Drama",
-        "Romance"
-      ],
-      "rate": 8.8
-    },
-    {
-      "title": "Star Wars: Episode V - The Empire Strikes Back",
-      "year": 1980,
-      "director": "Irvin Kershner",
-      "duration": "2h 4min",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Fantasy",
-        "Sci-Fi"
-      ],
-      "rate": 8.8
-    },
-    {
-      "title": "Inception",
-      "year": 2010,
-      "director": "Christopher Nolan",
-      "duration": "2h 28min",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "rate": 8.8
-    },
-    {
-      "title": "The Lord of the Rings: The Two Towers",
-      "year": 2002,
-      "director": "Peter Jackson",
-      "duration": "2h 59min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "Fantasy"
-      ],
-      "rate": 8.7
-    },
-    {
-      "title": "One Flew Over the Cuckoo\"s Nest",
-      "year": 1975,
-      "director": "Milos Forman",
-      "duration": "2h 13min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.7
-    },
-    {
-      "title": "Goodfellas",
-      "year": 1990,
-      "director": "Martin Scorsese",
-      "duration": "2h 26min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.7
-    },
-    {
-      "title": "The Matrix",
-      "year": 1999,
-      "director": "Lana Wachowski",
-      "duration": "2h 16min",
-      "genre": [
-        "Action",
-        "Sci-Fi"
-      ],
-      "rate": 8.7
-    },
-    {
-      "title": "Shichinin no samurai",
-      "year": 1954,
-      "director": "Akira Kurosawa",
-      "duration": "3h 27min",
-      "genre": [
-        "Adventure",
-        "Drama"
-      ],
-      "rate": 8.7
-    },
-    {
-      "title": "Star Wars",
-      "year": 1977,
-      "director": "George Lucas",
-      "duration": "2h 1min",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Fantasy",
-        "Sci-Fi"
-      ],
-      "rate": 8.7
-    },
-    {
-      "title": "Cidade de Deus",
-      "year": 2002,
-      "director": "Fernando Meirelles",
-      "duration": "2h 10min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.7
-    },
-    {
-      "title": "Se7en",
-      "year": 1995,
-      "director": "David Fincher",
-      "duration": "2h 7min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.6
-    },
-    {
-      "title": "The Silence of the Lambs",
-      "year": 1991,
-      "director": "Jonathan Demme",
-      "duration": "1h 58min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.6
-    },
-    {
-      "title": "It\"s a Wonderful Life",
-      "year": 1946,
-      "director": "Frank Capra",
-      "duration": "2h 10min",
-      "genre": [
-        "Drama",
-        "Family",
-        "Fantasy"
-      ],
-      "rate": 8.6
-    },
-    {
-      "title": "La vita è bella",
-      "year": 1997,
-      "director": "Roberto Benigni",
-      "duration": "1h 56min",
-      "genre": [
-        "Comedy",
-        "Drama",
-        "War"
-      ],
-      "rate": 8.6
-    },
-    {
-      "title": "The Usual Suspects",
-      "year": 1995,
-      "director": "Bryan Singer",
-      "duration": "1h 46min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.6
-    },
-    {
-      "title": "Léon",
-      "year": 1988,
-      "director": "Luc Besson",
-      "duration": "1h 50min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.6
-    },
-    {
-      "title": "Saving Private Ryan",
-      "year": 1998,
-      "director": "Steven Spielberg",
-      "duration": "2h 49min",
-      "genre": [
-        "Drama",
-        "War"
-      ],
-      "rate": 8.6
-    },
-    {
-      "title": "Sen to Chihiro no kamikakushi",
-      "year": 2001,
-      "director": "Hayao Miyazaki",
-      "duration": "2h 5min",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Family",
-        "Fantasy",
-        "Mystery"
-      ],
-      "rate": 8.6
-    },
-    {
-      "title": "American History X",
-      "year": 1998,
-      "director": "Tony Kaye",
-      "duration": "1h 59min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "C\"era una volta il West",
-      "year": 1968,
-      "director": "Sergio Leone",
-      "duration": "2h 44min",
-      "genre": [
-        "Western"
-      ],
-      "rate": 8.6
-    },
-    {
-      "title": "Interstellar",
-      "year": 2014,
-      "director": "Christopher Nolan",
-      "duration": "2h 49min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "Sci-Fi"
-      ],
-      "rate": 8.6
-    },
-    {
-      "title": "Psycho",
-      "year": 1960,
-      "director": "Alfred Hitchcock",
-      "duration": "1h 49min",
-      "genre": [
-        "Horror",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "The Green Mile",
-      "year": 1999,
-      "director": "Frank Darabont",
-      "duration": "3h 9min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Fantasy",
-        "Mystery"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Casablanca",
-      "year": 1942,
-      "director": "Michael Curtiz",
-      "duration": "1h 42min",
-      "genre": [
-        "Drama",
-        "Romance",
-        "War"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "City Lights",
-      "year": 1931,
-      "director": "Charles Chaplin",
-      "duration": "1h 27min",
-      "genre": [
-        "Comedy",
-        "Drama",
-        "Romance"
-      ],
-      "rate": 8.6
-    },
-    {
-      "title": "Intouchables",
-      "year": 2011,
-      "director": "Olivier Nakache",
-      "duration": "1h 52min",
-      "genre": [
-        "Biography",
-        "Comedy",
-        "Drama"
-      ],
-      "rate": 8.6
-    },
-    {
-      "title": "Modern Times",
-      "year": 1936,
-      "director": "Charles Chaplin",
-      "duration": "1h 27min",
-      "genre": [
-        "Comedy",
-        "Drama",
-        "Family",
-        "Romance"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Raiders of the Lost Ark",
-      "year": 1981,
-      "director": "Steven Spielberg",
-      "duration": "1h 55min",
-      "genre": [
-        "Action",
-        "Adventure"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "The Pianist",
-      "year": 2002,
-      "director": "Roman Polanski",
-      "duration": "2h 30min",
-      "genre": [
-        "Biography",
-        "Drama",
-        "Music",
-        "War"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "The Departed",
-      "year": 2006,
-      "director": "Martin Scorsese",
-      "duration": "2h 31min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Rear Window",
-      "year": 1954,
-      "director": "Alfred Hitchcock",
-      "duration": "1h 52min",
-      "genre": [
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Terminator 2: Judgment Day",
-      "year": 1991,
-      "director": "James Cameron",
-      "duration": "2h 17min",
-      "genre": [
-        "Action",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Back to the Future",
-      "year": 1985,
-      "director": "Robert Zemeckis",
-      "duration": "1h 56min",
-      "genre": [
-        "Adventure",
-        "Comedy",
-        "Sci-Fi"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Whiplash",
-      "year": 2014,
-      "director": "Damien Chazelle",
-      "duration": "1h 47min",
-      "genre": [
-        "Drama",
-        "Music"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Gladiator",
-      "year": 2000,
-      "director": "Ridley Scott",
-      "duration": "2h 35min",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Drama"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "The Prestige",
-      "year": 1994,
-      "director": "Christopher Nolan",
-      "duration": "2h 10min",
-      "genre": [
-        "Drama",
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "The Lion King",
-      "year": 1994,
-      "director": "Roger Allers",
-      "duration": "1h 28min",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Drama",
-        "Family",
-        "Musical"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Memento",
-      "year": 2000,
-      "director": "Christopher Nolan",
-      "duration": "1h 53min",
-      "genre": [
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Apocalypse Now",
-      "year": 1979,
-      "director": "Francis Ford Coppola",
-      "duration": "2h 27min",
-      "genre": [
-        "Drama",
-        "War"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Alien",
-      "year": 1979,
-      "director": "Ridley Scott",
-      "duration": "1h 57min",
-      "genre": [
-        "Horror",
-        "Sci-Fi"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "The Great Dictator",
-      "year": 1940,
-      "director": "Charles Chaplin",
-      "duration": "2h 5min",
-      "genre": [
-        "Comedy",
-        "Drama",
-        "War"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Sunset Blvd.",
-      "year": 1950,
-      "director": "Billy Wilder",
-      "duration": "1h 50min",
-      "genre": [
-        "Drama",
-        "Film-Noir"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
-      "year": 1964,
-      "director": "Stanley Kubrick",
-      "duration": "1h 35min",
-      "genre": [
-        "Comedy"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Nuovo Cinema Paradiso",
-      "year": 1988,
-      "director": "Giuseppe Tornatore",
-      "duration": "2h 35min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Das Leben der Anderen",
-      "year": 2006,
-      "director": "Florian Henckel von Donnersmarck",
-      "duration": "2h 17min",
-      "genre": [
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Hotaru no haka",
-      "year": 1988,
-      "director": "Isao Takahata",
-      "duration": "1h 29min",
-      "genre": [
-        "Animation",
-        "Drama",
-        "War"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Blade Runner 2049",
-      "year": 2017,
-      "director": "Denis Villeneuve",
-      "duration": "2h 44min",
-      "genre": [
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Paths of Glory",
-      "year": 1957,
-      "director": "Stanley Kubrick",
-      "duration": "1h 28min",
-      "genre": [
-        "Drama",
-        "War"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Django Unchained",
-      "year": 2012,
-      "director": "Quentin Tarantino",
-      "duration": "2h 45min",
-      "genre": [
-        "Drama",
-        "Western"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "The Shining",
-      "year": 1980,
-      "director": "Stanley Kubrick",
-      "duration": "2h 26min",
-      "genre": [
-        "Drama",
-        "Horror"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "WALL·E",
-      "year": 2008,
-      "director": "Andrew Stanton",
-      "duration": "1h 38min",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Family",
-        "Sci-Fi"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "American Beauty",
-      "year": 1999,
-      "director": "Sam Mendes",
-      "duration": "2h 2min",
-      "genre": [
-        "Drama",
-        "Romance"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "The Dark Knight Rises",
-      "year": 2012,
-      "director": "Christopher Nolan",
-      "duration": "2h 44min",
-      "genre": [
-        "Action",
-        "Thriller"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Mononoke-hime",
-      "year": 1997,
-      "director": "Hayao Miyazaki",
-      "duration": "2h 14min",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Fantasy"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Oldeuboi",
-      "year": 2003,
-      "director": "Chan-wook Park",
-      "duration": "2h",
-      "genre": [
-        "Action",
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Aliens",
-      "year": 1986,
-      "director": "James Cameron",
-      "duration": "2h 17min",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Witness for the Prosecution",
-      "year": 1957,
-      "director": "Billy Wilder",
-      "duration": "1h 56min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Once Upon a Time in America",
-      "year": 1984,
-      "director": "Sergio Leone",
-      "duration": "3h 49min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Das Boot",
-      "year": 1981,
-      "director": "Wolfgang Petersen",
-      "duration": "2h 29min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "Thriller",
-        "War"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Citizen Kane",
-      "year": 1941,
-      "director": "Orson Welles",
-      "duration": "1h 59min",
-      "genre": [
-        "Drama",
-        "Mystery"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Dangal",
-      "year": 2016,
-      "director": "Nitesh Tiwari",
-      "duration": "2h 41min",
-      "genre": [
-        "Action",
-        "Biography",
-        "Drama",
-        "Sport"
-      ],
-      "rate": 8.6
-    },
-    {
-      "title": "Vertigo",
-      "year": 2001,
-      "director": "Alfred Hitchcock",
-      "duration": "2h 8min",
-      "genre": [
-        "Mystery",
-        "Romance",
-        "Thriller"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "North by Northwest",
-      "year": 1959,
-      "director": "Alfred Hitchcock",
-      "duration": "2h 16min",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Star Wars: Episode VI - Return of the Jedi",
-      "year": 1983,
-      "director": "Richard Marquand",
-      "duration": "2h 11min",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Fantasy",
-        "Sci-Fi"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Braveheart",
-      "year": 1995,
-      "director": "Mel Gibson",
-      "duration": "2h 58min",
-      "genre": [
-        "Biography",
-        "Drama",
-        "History",
-        "War"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Reservoir Dogs",
-      "year": 1992,
-      "director": "Quentin Tarantino",
-      "duration": "1h 39min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "M",
-      "year": 1931,
-      "director": "Fritz Lang",
-      "duration": "1h 57min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Requiem for a Dream",
-      "year": 2000,
-      "director": "Darren Aronofsky",
-      "duration": "1h 42min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Le fabuleux destin d\"Amélie Poulain",
-      "year": 2001,
-      "director": "Jean-Pierre Jeunet",
-      "duration": "2h 2min",
-      "genre": [
-        "Comedy",
-        "Romance"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Taare Zameen Par",
-      "year": 2007,
-      "director": "Aamir Khan",
-      "duration": "2h 45min",
-      "genre": [
-        "Drama",
-        "Family"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "A Clockwork Orange",
-      "year": 1971,
-      "director": "Stanley Kubrick",
-      "duration": "2h 16min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Sci-Fi"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Kimi no na wa.",
-      "year": 2016,
-      "director": "Makoto Shinkai",
-      "duration": "1h 46min",
-      "genre": [
-        "Animation",
-        "Drama",
-        "Fantasy",
-        "Romance"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Lawrence of Arabia",
-      "year": 1962,
-      "director": "David Lean",
-      "duration": "3h 36min",
-      "genre": [
-        "Adventure",
-        "Biography",
-        "Drama",
-        "History",
-        "War"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Double Indemnity",
-      "year": 1944,
-      "director": "Billy Wilder",
-      "duration": "1h 47min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Film-Noir",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Amadeus",
-      "year": 1984,
-      "director": "Milos Forman",
-      "duration": "2h 40min",
-      "genre": [
-        "Biography",
-        "Drama",
-        "History",
-        "Music"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Eternal Sunshine of the Spotless Mind",
-      "year": 2004,
-      "director": "Michel Gondry",
-      "duration": "1h 48min",
-      "genre": [
-        "Drama",
-        "Romance",
-        "Sci-Fi"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Taxi Driver",
-      "year": 1976,
-      "director": "Martin Scorsese",
-      "duration": "1h 53min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "To Kill a Mockingbird",
-      "year": 1962,
-      "director": "Robert Mulligan",
-      "duration": "2h 9min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Dunkirk",
-      "year": 2017,
-      "director": "Christopher Nolan",
-      "duration": "1h 46min",
-      "genre": [
-        "Action",
-        "Drama",
-        "History",
-        "Thriller",
-        "War"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Full Metal Jacket",
-      "year": 1987,
-      "director": "Stanley Kubrick",
-      "duration": "1h 56min",
-      "genre": [
-        "Drama",
-        "War"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "2001: A Space Odyssey",
-      "year": 1968,
-      "director": "Stanley Kubrick",
-      "duration": "2h 29min",
-      "genre": [
-        "Adventure",
-        "Sci-Fi"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Singin\" in the Rain",
-      "year": 1952,
-      "director": "Stanley Donen",
-      "duration": "1h 43min",
-      "genre": [
-        "Comedy",
-        "Musical",
-        "Romance"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Toy Story 3",
-      "year": 2010,
-      "director": "Lee Unkrich",
-      "duration": "1h 43min",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Comedy",
-        "Family",
-        "Fantasy"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Toy Story",
-      "year": 1995,
-      "director": "John Lasseter",
-      "duration": "1h 21min",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Comedy",
-        "Family",
-        "Fantasy"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "The Sting",
-      "year": 1973,
-      "director": "George Roy Hill",
-      "duration": "2h 9min",
-      "genre": [
-        "Comedy",
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "3 Idiots",
-      "year": 2009,
-      "director": "Rajkumar Hirani",
-      "duration": "2h 50min",
-      "genre": [
-        "Adventure",
-        "Comedy",
-        "Drama",
-        "Romance"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Ladri di biciclette",
-      "year": 1948,
-      "director": "Vittorio De Sica",
-      "duration": "1h 29min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Inglourious Basterds",
-      "year": 2009,
-      "director": "Quentin Tarantino",
-      "duration": "2h 33min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "War"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "The Kid",
-      "year": 1921,
-      "director": "Charles Chaplin",
-      "duration": "1h 8min",
-      "genre": [
-        "Comedy",
-        "Drama",
-        "Family"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Snatch",
-      "year": 2000,
-      "director": "Guy Ritchie",
-      "duration": "1h 44min",
-      "genre": [
-        "Comedy",
-        "Crime"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Monty Python and the Holy Grail",
-      "year": 1975,
-      "director": "Terry Gilliam",
-      "duration": "1h 31min",
-      "genre": [
-        "Adventure",
-        "Comedy",
-        "Fantasy"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Good Will Hunting",
-      "year": 1997,
-      "director": "Gus Van Sant",
-      "duration": "2h 6min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Jagten",
-      "year": 2012,
-      "director": "Thomas Vinterberg",
-      "duration": "1h 55min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Per qualche dollaro in più",
-      "year": 1965,
-      "director": "Sergio Leone",
-      "duration": "2h 12min",
-      "genre": [
-        "Western"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "L.A. Confidential",
-      "year": 1997,
-      "director": "Curtis Hanson",
-      "duration": "2h 18min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Scarface",
-      "year": 1983,
-      "director": "Brian De Palma",
-      "duration": "2h 50min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "The Apartment",
-      "year": 1960,
-      "director": "Billy Wilder",
-      "duration": "2h 5min",
-      "genre": [
-        "Comedy",
-        "Drama",
-        "Romance"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Metropolis",
-      "year": 1927,
-      "director": "Fritz Lang",
-      "duration": "2h 33min",
-      "genre": [
-        "Drama",
-        "Sci-Fi"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Jodaeiye Nader az Simin",
-      "year": 2011,
-      "director": "Asghar Farhadi",
-      "duration": "2h 3min",
-      "genre": [
-        "Drama",
-        "Mystery"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Rashômon",
-      "year": 1950,
-      "director": "Akira Kurosawa",
-      "duration": "1h 28min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Mystery"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Indiana Jones and the Last Crusade",
-      "year": 1989,
-      "director": "Steven Spielberg",
-      "duration": "2h 7min",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Fantasy"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "All About Eve",
-      "year": 1950,
-      "director": "Joseph L. Mankiewicz",
-      "duration": "2h 18min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Yôjinbô",
-      "year": 1961,
-      "director": "Akira Kurosawa",
-      "duration": "1h 50min",
-      "genre": [
-        "Action",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Babam ve Oglum",
-      "year": 2005,
-      "director": "Çagan Irmak",
-      "duration": "1h 48min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.5
-    },
-    {
-      "title": "Up",
-      "year": 2009,
-      "director": "Pete Docter",
-      "duration": "1h 36min",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Comedy",
-        "Family"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Batman Begins",
-      "year": 2005,
-      "director": "Christopher Nolan",
-      "duration": "2h 32min",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Thriller"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Some Like It Hot",
-      "year": 1959,
-      "director": "Billy Wilder",
-      "duration": "2h 1min",
-      "genre": [
-        "Comedy",
-        "Romance"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "The Treasure of the Sierra Madre",
-      "year": 1948,
-      "director": "John Huston",
-      "duration": "2h 6min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "Western"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Unforgiven",
-      "year": 1992,
-      "director": "Clint Eastwood",
-      "duration": "2h 10min",
-      "genre": [
-        "Drama",
-        "Western"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Der Untergang",
-      "year": 2004,
-      "director": "Oliver Hirschbiegel",
-      "duration": "2h 36min",
-      "genre": [
-        "Biography",
-        "Drama",
-        "History",
-        "War"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Die Hard",
-      "year": 1988,
-      "director": "John McTiernan",
-      "duration": "2h 11min",
-      "genre": [
-        "Action",
-        "Thriller"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Raging Bull",
-      "year": 1980,
-      "director": "Martin Scorsese",
-      "duration": "2h 9min",
-      "genre": [
-        "Biography",
-        "Drama",
-        "Sport"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Heat",
-      "year": 1995,
-      "director": "Michael Mann",
-      "duration": "2h 50min",
-      "genre": [
-        "Action",
-        "Crime",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "The Third Man",
-      "year": 1949,
-      "director": "Carol Reed",
-      "duration": "1h 44min",
-      "genre": [
-        "Film-Noir",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Bacheha-Ye aseman",
-      "year": 1997,
-      "director": "Majid Majidi",
-      "duration": "1h 29min",
-      "genre": [
-        "Drama",
-        "Family"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "The Great Escape",
-      "year": 1963,
-      "director": "John Sturges",
-      "duration": "2h 52min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "History",
-        "Thriller",
-        "War"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Ikiru",
-      "year": 1952,
-      "director": "Akira Kurosawa",
-      "duration": "2h 23min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Chinatown",
-      "year": 1974,
-      "director": "Roman Polanski",
-      "duration": "2h 10min",
-      "genre": [
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "El laberinto del fauno",
-      "year": 2006,
-      "director": "Guillermo del Toro",
-      "duration": "1h 58min",
-      "genre": [
-        "Drama",
-        "Fantasy",
-        "War"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Tonari no Totoro",
-      "year": 1988,
-      "director": "Hayao Miyazaki",
-      "duration": "1h 26min",
-      "genre": [
-        "Animation",
-        "Family",
-        "Fantasy"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Incendies",
-      "year": 2010,
-      "director": "Denis Villeneuve",
-      "duration": "2h 11min",
-      "genre": [
-        "Drama",
-        "Mystery",
-        "War"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Ran",
-      "year": 1985,
-      "director": "Akira Kurosawa",
-      "duration": "2h 42min",
-      "genre": [
-        "Action",
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "The Gold Rush",
-      "year": 1925,
-      "director": "Charles Chaplin",
-      "duration": "1h 35min",
-      "genre": [
-        "Adventure",
-        "Comedy",
-        "Drama",
-        "Family"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "El secreto de sus ojos",
-      "year": 2009,
-      "director": "Juan José Campanella",
-      "duration": "2h 9min",
-      "genre": [
-        "Drama",
-        "Mystery",
-        "Romance",
-        "Thriller"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Inside Out",
-      "year": 2014,
-      "director": "Pete Docter",
-      "duration": "1h 35min",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Comedy",
-        "Drama",
-        "Family",
-        "Fantasy"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Judgment at Nuremberg",
-      "year": 1961,
-      "director": "Stanley Kramer",
-      "duration": "3h 6min",
-      "genre": [
-        "Drama",
-        "War"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "On the Waterfront",
-      "year": 1954,
-      "director": "Elia Kazan",
-      "duration": "1h 48min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Hauru no ugoku shiro",
-      "year": 2004,
-      "director": "Hayao Miyazaki",
-      "duration": "1h 59min",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Family",
-        "Fantasy"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "The Bridge on the River Kwai",
-      "year": 1957,
-      "director": "David Lean",
-      "duration": "2h 41min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "War"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Room",
-      "year": 2015,
-      "director": "Lenny Abrahamson",
-      "duration": "1h 58min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Det sjunde inseglet",
-      "year": 1957,
-      "director": "Ingmar Bergman",
-      "duration": "1h 36min",
-      "genre": [
-        "Drama",
-        "Fantasy"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Lock, Stock and Two Smoking Barrels",
-      "year": 1998,
-      "director": "Guy Ritchie",
-      "duration": "1h 47min",
-      "genre": [
-        "Comedy",
-        "Crime"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Mr. Smith Goes to Washington",
-      "year": 1939,
-      "director": "Frank Capra",
-      "duration": "2h 9min",
-      "genre": [
-        "Comedy",
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Blade Runner",
-      "year": 1982,
-      "director": "Ridley Scott",
-      "duration": "1h 57min",
-      "genre": [
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Casino",
-      "year": 1995,
-      "director": "Martin Scorsese",
-      "duration": "2h 58min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "A Beautiful Mind",
-      "year": 2001,
-      "director": "Ron Howard",
-      "duration": "2h 15min",
-      "genre": [
-        "Biography",
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "The Elephant Man",
-      "year": 1980,
-      "director": "David Lynch",
-      "duration": "2h 4min",
-      "genre": [
-        "Biography",
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Smultronstället",
-      "year": 1957,
-      "director": "Ingmar Bergman",
-      "duration": "1h 31min",
-      "genre": [
-        "Drama",
-        "Romance"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "V for Vendetta",
-      "year": 2005,
-      "director": "James McTeigue",
-      "duration": "2h 12min",
-      "genre": [
-        "Action",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "The Wolf of Wall Street",
-      "year": 2013,
-      "director": "Martin Scorsese",
-      "duration": "3h",
-      "genre": [
-        "Biography",
-        "Comedy",
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "The General",
-      "year": 1926,
-      "director": "Clyde Bruckman",
-      "duration": "1h 7min",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Comedy",
-        "Drama",
-        "War",
-        "Western"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Warrior",
-      "year": 2011,
-      "director": "Gavin O\"Connor",
-      "duration": "2h 20min",
-      "genre": [
-        "Drama",
-        "Sport"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Trainspotting",
-      "year": 1996,
-      "director": "Danny Boyle",
-      "duration": "1h 34min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Dial M for Murder",
-      "year": 1954,
-      "director": "Alfred Hitchcock",
-      "duration": "1h 45min",
-      "genre": [
-        "Crime",
-        "Film-Noir",
-        "Thriller"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Gran Torino",
-      "year": 2008,
-      "director": "Clint Eastwood",
-      "duration": "1h 56min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Sunrise: A Song of Two Humans",
-      "year": 1927,
-      "director": "F.W. Murnau",
-      "duration": "1h 34min",
-      "genre": [
-        "Drama",
-        "Romance"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Gone with the Wind",
-      "year": 1939,
-      "director": "Victor Fleming",
-      "duration": "3h 58min",
-      "genre": [
-        "Drama",
-        "History",
-        "Romance",
-        "War"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Andrey Rublev",
-      "year": 1966,
-      "director": "Andrei Tarkovsky",
-      "duration": "3h 25min",
-      "genre": [
-        "Biography",
-        "Drama",
-        "History"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "The Deer Hunter",
-      "year": 1978,
-      "director": "Michael Cimino",
-      "duration": "3h 3min",
-      "genre": [
-        "Drama",
-        "War"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Fargo",
-      "year": 1996,
-      "director": "Joel Coen",
-      "duration": "1h 38min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "The Sixth Sense",
-      "year": 1999,
-      "director": "M. Night Shyamalan",
-      "duration": "1h 47min",
-      "genre": [
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "The Thing",
-      "year": 2004,
-      "director": "John Carpenter",
-      "duration": "1h 49min",
-      "genre": [
-        "Horror",
-        "Mystery",
-        "Sci-Fi"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "No Country for Old Men",
-      "year": 2007,
-      "director": "Ethan Coen",
-      "duration": "2h 2min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "The Big Lebowski",
-      "year": 1998,
-      "director": "Joel Coen",
-      "duration": "1h 57min",
-      "genre": [
-        "Comedy",
-        "Crime"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Eskiya",
-      "year": 1996,
-      "director": "Yavuz Turgul",
-      "duration": "2h 8min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.4
-    },
-    {
-      "title": "Finding Nemo",
-      "year": 2003,
-      "director": "Andrew Stanton",
-      "duration": "1h 40min",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Comedy",
-        "Family"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Tôkyô monogatari",
-      "year": 1953,
-      "director": "Yasujirô Ozu",
-      "duration": "2h 16min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "There Will Be Blood",
-      "year": 2007,
-      "director": "Paul Thomas Anderson",
-      "duration": "2h 38min",
-      "genre": [
-        "Drama",
-        "History"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Cool Hand Luke",
-      "year": 1967,
-      "director": "Stuart Rosenberg",
-      "duration": "2h 6min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Rebecca",
-      "year": 1940,
-      "director": "Alfred Hitchcock",
-      "duration": "2h 10min",
-      "genre": [
-        "Drama",
-        "Mystery",
-        "Romance",
-        "Thriller"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Hacksaw Ridge",
-      "year": 2016,
-      "director": "Mel Gibson",
-      "duration": "2h 19min",
-      "genre": [
-        "Biography",
-        "Drama",
-        "History",
-        "War"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "La La Land",
-      "year": 2016,
-      "director": "Damien Chazelle",
-      "duration": "2h 8min",
-      "genre": [
-        "Comedy",
-        "Drama",
-        "Music",
-        "Musical",
-        "Romance"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Idi i smotri",
-      "year": 1992,
-      "director": "Elem Klimov",
-      "duration": "2h 22min",
-      "genre": [
-        "Drama",
-        "War"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Kill Bill: Vol. 1",
-      "year": 2003,
-      "director": "Quentin Tarantino",
-      "duration": "1h 51min",
-      "genre": [
-        "Action",
-        "Crime",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Rang De Basanti",
-      "year": 2006,
-      "director": "Rakeysh Omprakash Mehra",
-      "duration": "2h 37min",
-      "genre": [
-        "Comedy",
-        "Drama",
-        "History",
-        "Romance"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "How to Train Your Dragon",
-      "year": 2010,
-      "director": "Dean DeBlois",
-      "duration": "1h 38min",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Comedy",
-        "Family",
-        "Fantasy"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "La passion de Jeanne d\"Arc",
-      "year": 1928,
-      "director": "Carl Theodor Dreyer",
-      "duration": "1h 50min",
-      "genre": [
-        "Biography",
-        "Drama",
-        "History"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Mary and Max",
-      "year": 2009,
-      "director": "Adam Elliot",
-      "duration": "1h 32min",
-      "genre": [
-        "Animation",
-        "Comedy",
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Gone Girl",
-      "year": 2014,
-      "director": "David Fincher",
-      "duration": "2h 29min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Into the Wild",
-      "year": 2007,
-      "director": "Sean Penn",
-      "duration": "2h 28min",
-      "genre": [
-        "Adventure",
-        "Biography",
-        "Drama"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Shutter Island",
-      "year": 2010,
-      "director": "Martin Scorsese",
-      "duration": "2h 18min",
-      "genre": [
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Logan",
-      "year": 2017,
-      "director": "James Mangold",
-      "duration": "2h 17min",
-      "genre": [
-        "Action",
-        "Drama",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "It Happened One Night",
-      "year": 1934,
-      "director": "Frank Capra",
-      "duration": "1h 45min",
-      "genre": [
-        "Comedy",
-        "Romance"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Life of Brian",
-      "year": 1979,
-      "director": "Terry Jones",
-      "duration": "1h 34min",
-      "genre": [
-        "Comedy"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Relatos salvajes",
-      "year": 2014,
-      "director": "Damián Szifron",
-      "duration": "2h 2min",
-      "genre": [
-        "Comedy",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "A Wednesday",
-      "year": 2008,
-      "director": "Neeraj Pandey",
-      "duration": "1h 44min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.3
-    },
-    {
-      "title": "Platoon",
-      "year": 1986,
-      "director": "Oliver Stone",
-      "duration": "2h",
-      "genre": [
-        "Drama",
-        "War"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Hotel Rwanda",
-      "year": 2004,
-      "director": "Terry George",
-      "duration": "2h 1min",
-      "genre": [
-        "Biography",
-        "Drama",
-        "History",
-        "War"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Le salaire de la peur",
-      "year": 1953,
-      "director": "Henri-Georges Clouzot",
-      "duration": "2h 11min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Network",
-      "year": 1976,
-      "director": "Sidney Lumet",
-      "duration": "2h 1min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Rush",
-      "year": 2013,
-      "director": "Ron Howard",
-      "duration": "2h 3min",
-      "genre": [
-        "Action",
-        "Biography",
-        "Drama",
-        "History",
-        "Sport"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "In the Name of the Father",
-      "year": 1993,
-      "director": "Jim Sheridan",
-      "duration": "2h 13min",
-      "genre": [
-        "Biography",
-        "Drama"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Stand by Me",
-      "year": 1986,
-      "director": "Rob Reiner",
-      "duration": "1h 29min",
-      "genre": [
-        "Adventure",
-        "Drama"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Persona",
-      "year": 1966,
-      "director": "Ingmar Bergman",
-      "duration": "1h 25min",
-      "genre": [
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Ben-Hur",
-      "year": 1959,
-      "director": "William Wyler",
-      "duration": "3h 32min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "History"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "The Grand Budapest Hotel",
-      "year": 2014,
-      "director": "Wes Anderson",
-      "duration": "1h 39min",
-      "genre": [
-        "Adventure",
-        "Comedy",
-        "Drama"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Les quatre cents coups",
-      "year": 1959,
-      "director": "François Truffaut",
-      "duration": "1h 32min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Salinui chueok",
-      "year": 2003,
-      "director": "Joon-ho Bong",
-      "duration": "2h 11min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "12 Years a Slave",
-      "year": 2013,
-      "director": "Steve McQueen",
-      "duration": "2h 14min",
-      "genre": [
-        "Biography",
-        "Drama",
-        "History"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Mad Max: Fury Road",
-      "year": 2015,
-      "director": "George Miller",
-      "duration": "2h",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Jurassic Park",
-      "year": 2000,
-      "director": "Steven Spielberg",
-      "duration": "2h 7min",
-      "genre": [
-        "Adventure",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Spotlight",
-      "year": 2015,
-      "director": "Tom McCarthy",
-      "duration": "2h 8min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "History"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Million Dollar Baby",
-      "year": 2004,
-      "director": "Clint Eastwood",
-      "duration": "2h 12min",
-      "genre": [
-        "Drama",
-        "Sport"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Stalker",
-      "year": 1979,
-      "director": "Andrei Tarkovsky",
-      "duration": "2h 42min",
-      "genre": [
-        "Drama",
-        "Sci-Fi"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Butch Cassidy and the Sundance Kid",
-      "year": 1969,
-      "director": "George Roy Hill",
-      "duration": "1h 50min",
-      "genre": [
-        "Biography",
-        "Crime",
-        "Drama",
-        "Western"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Amores perros",
-      "year": 2000,
-      "director": "Alejandro González Iñárritu",
-      "duration": "2h 34min",
-      "genre": [
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "The Truman Show",
-      "year": 1990,
-      "director": "Peter Weir",
-      "duration": "1h 43min",
-      "genre": [
-        "Comedy",
-        "Drama",
-        "Sci-Fi"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Hachi: A Dog\"s Tale",
-      "year": 1983,
-      "director": "Lasse Hallström",
-      "duration": "1h 33min",
-      "genre": [
-        "Drama",
-        "Family"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "The Maltese Falcon",
-      "year": 1941,
-      "director": "John Huston",
-      "duration": "1h 40min",
-      "genre": [
-        "Film-Noir",
-        "Mystery"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Kaze no tani no Naushika",
-      "year": 1984,
-      "director": "Hayao Miyazaki",
-      "duration": "1h 57min",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Fantasy",
-        "Sci-Fi"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "The Princess Bride",
-      "year": 1987,
-      "director": "Rob Reiner",
-      "duration": "1h 38min",
-      "genre": [
-        "Adventure",
-        "Family",
-        "Fantasy",
-        "Romance"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Before Sunrise",
-      "year": 1995,
-      "director": "Richard Linklater",
-      "duration": "1h 41min",
-      "genre": [
-        "Drama",
-        "Romance"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Le notti di Cabiria",
-      "year": 1957,
-      "director": "Federico Fellini",
-      "duration": "1h 50min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Paper Moon",
-      "year": 1973,
-      "director": "Peter Bogdanovich",
-      "duration": "1h 42min",
-      "genre": [
-        "Comedy",
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Prisoners",
-      "year": 2013,
-      "director": "Denis Villeneuve",
-      "duration": "2h 33min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Harry Potter and the Deathly Hallows: Part 2",
-      "year": 2011,
-      "director": "David Yates",
-      "duration": "2h 10min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "Fantasy",
-        "Mystery"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "The Grapes of Wrath",
-      "year": 1940,
-      "director": "John Ford",
-      "duration": "2h 9min",
-      "genre": [
-        "Drama",
-        "History"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Rocky",
-      "year": 1976,
-      "director": "John G. Avildsen",
-      "duration": "2h",
-      "genre": [
-        "Drama",
-        "Sport"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Catch Me If You Can",
-      "year": 2002,
-      "director": "Steven Spielberg",
-      "duration": "2h 21min",
-      "genre": [
-        "Biography",
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Touch of Evil",
-      "year": 1958,
-      "director": "Orson Welles",
-      "duration": "1h 35min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Film-Noir",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Les diaboliques",
-      "year": 1955,
-      "director": "Henri-Georges Clouzot",
-      "duration": "1h 57min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Horror",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Gandhi",
-      "year": 1982,
-      "director": "Richard Attenborough",
-      "duration": "3h 11min",
-      "genre": [
-        "Biography",
-        "Drama",
-        "History"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Donnie Darko",
-      "year": 2001,
-      "director": "Richard Kelly",
-      "duration": "1h 53min",
-      "genre": [
-        "Drama",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Munna Bhai M.B.B.S.",
-      "year": 2003,
-      "director": "Rajkumar Hirani",
-      "duration": "2h 36min",
-      "genre": [
-        "Comedy",
-        "Drama",
-        "Romance"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Monsters, Inc.",
-      "year": 2001,
-      "director": "Pete Docter",
-      "duration": "1h 32min",
-      "genre": [
-        "Animation",
-        "Adventure",
-        "Comedy",
-        "Family",
-        "Fantasy"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Star Wars: Episode VII - The Force Awakens",
-      "year": 2015,
-      "director": "J.J. Abrams",
-      "duration": "2h 16min",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Fantasy",
-        "Sci-Fi"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Annie Hall",
-      "year": 1977,
-      "director": "Woody Allen",
-      "duration": "1h 33min",
-      "genre": [
-        "Comedy",
-        "Romance"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "The Terminator",
-      "year": 1984,
-      "director": "James Cameron",
-      "duration": "1h 47min",
-      "genre": [
-        "Action",
-        "Sci-Fi"
-      ],
-      "rate": 8
-    },
-    {
-      "title": "Barry Lyndon",
-      "year": 1975,
-      "director": "Stanley Kubrick",
-      "duration": "3h 4min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "History",
-        "War"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "The Bourne Ultimatum",
-      "year": 2007,
-      "director": "Paul Greengrass",
-      "duration": "1h 55min",
-      "genre": [
-        "Action",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "The Wizard of Oz",
-      "year": 1939,
-      "director": "Victor Fleming",
-      "duration": "1h 42min",
-      "genre": [
-        "Adventure",
-        "Family",
-        "Fantasy",
-        "Musical"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Groundhog Day",
-      "year": 1993,
-      "director": "Harold Ramis",
-      "duration": "1h 41min",
-      "genre": [
-        "Comedy",
-        "Fantasy",
-        "Romance"
-      ],
-      "rate": 8
-    },
-    {
-      "title": "La haine",
-      "year": 1995,
-      "director": "Mathieu Kassovitz",
-      "duration": "1h 38min",
-      "genre": [
-        "Crime",
-        "Drama"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "8½",
-      "year": 1963,
-      "director": "Federico Fellini",
-      "duration": "2h 18min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Jaws",
-      "year": 1975,
-      "director": "Steven Spielberg",
-      "duration": "2h 4min",
-      "genre": [
-        "Adventure",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8
-    },
-    {
-      "title": "Twelve Monkeys",
-      "year": 1995,
-      "director": "Terry Gilliam",
-      "duration": "2h 9min",
-      "genre": [
-        "Mystery",
-        "Sci-Fi",
-        "Thriller"
-      ],
-      "rate": 8
-    },
-    {
-      "title": "The Best Years of Our Lives",
-      "year": 1946,
-      "director": "William Wyler",
-      "duration": "2h 50min",
-      "genre": [
-        "Drama",
-        "Romance",
-        "War"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Mou gaan dou",
-      "year": 2002,
-      "director": "Wai-Keung Lau",
-      "duration": "1h 41min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Mystery",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Paris, Texas",
-      "year": 1984,
-      "director": "Wim Wenders",
-      "duration": "2h 25min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "The Help",
-      "year": 2011,
-      "director": "Tate Taylor",
-      "duration": "2h 26min",
-      "genre": [
-        "Drama"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Faa yeung nin wa",
-      "year": 2000,
-      "director": "Kar-Wai Wong",
-      "duration": "1h 38min",
-      "genre": [
-        "Drama",
-        "Romance"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Sholay",
-      "year": 1975,
-      "director": "Ramesh Sippy",
-      "duration": "3h 18min",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Comedy",
-        "Drama",
-        "Musical",
-        "Thriller"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Beauty and the Beast",
-      "year": 1991,
-      "director": "Gary Trousdale",
-      "duration": "1h 24min",
-      "genre": [
-        "Animation",
-        "Family",
-        "Fantasy",
-        "Musical",
-        "Romance"
-      ],
-      "rate": 8
-    },
-    {
-      "title": "La battaglia di Algeri",
-      "year": 1966,
-      "director": "Gillo Pontecorvo",
-      "duration": "2h 1min",
-      "genre": [
-        "Drama",
-        "War"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Ah-ga-ssi",
-      "year": 2016,
-      "director": "Chan-wook Park",
-      "duration": "2h 24min",
-      "genre": [
-        "Crime",
-        "Drama",
-        "Mystery",
-        "Romance",
-        "Thriller"
-      ],
-      "rate": 8.1
-    },
-    {
-      "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
-      "year": 2003,
-      "director": "Gore Verbinski",
-      "duration": "2h 23min",
-      "genre": [
-        "Action",
-        "Adventure",
-        "Fantasy"
-      ],
-      "rate": 8
-    },
-    {
-      "title": "PK",
-      "year": 2014,
-      "director": "Rajkumar Hirani",
-      "duration": "2h 33min",
-      "genre": [
-        "Comedy",
-        "Drama",
-        "Fantasy",
-        "Sci-Fi"
-      ],
-      "rate": 8.2
-    },
-    {
-      "title": "Dog Day Afternoon",
-      "year": 1975,
-      "director": "Sidney Lumet",
-      "duration": "2h 5min",
-      "genre": [
-        "Biography",
-        "Crime",
-        "Drama",
-        "Thriller"
-      ],
-      "rate": 8
-    },
-    {
-      "title": "Dead Poets Society",
-      "year": 1989,
-      "director": "Peter Weir",
-      "duration": "2h 8min",
-      "genre": [
-        "Comedy",
-        "Drama"
-      ],
-      "rate": 8
+let pokemons = [
+    {
+      "id": 1,
+      "num": "001",
+      "name": "Bulbasaur",
+      "img": "http://www.serebii.net/pokemongo/pokemon/001.png",
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "height": "0.71 m",
+      "weight": "6.9 kg",
+      "candy": "Bulbasaur Candy",
+      "candy_count": 25,
+      "egg": "2 km",
+      "spawn_chance": 0.69,
+      "avg_spawns": 69,
+      "spawn_time": "20:00",
+      "multipliers": [
+        1.58
+      ],
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Flying",
+        "Psychic"
+      ],
+      "next_evolution": [
+        {
+          "num": "002",
+          "name": "Ivysaur"
+        },
+        {
+          "num": "003",
+          "name": "Venusaur"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "num": "002",
+      "name": "Ivysaur",
+      "img": "http://www.serebii.net/pokemongo/pokemon/002.png",
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "height": "0.99 m",
+      "weight": "13.0 kg",
+      "candy": "Bulbasaur Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.042,
+      "avg_spawns": 4.2,
+      "spawn_time": "07:00",
+      "multipliers": [
+        1.2,
+        1.6
+      ],
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Flying",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "001",
+          "name": "Bulbasaur"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "003",
+          "name": "Venusaur"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "num": "003",
+      "name": "Venusaur",
+      "img": "http://www.serebii.net/pokemongo/pokemon/003.png",
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "height": "2.01 m",
+      "weight": "100.0 kg",
+      "candy": "Bulbasaur Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.017,
+      "avg_spawns": 1.7,
+      "spawn_time": "11:30",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Flying",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "001",
+          "name": "Bulbasaur"
+        },
+        {
+          "num": "002",
+          "name": "Ivysaur"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "num": "004",
+      "name": "Charmander",
+      "img": "http://www.serebii.net/pokemongo/pokemon/004.png",
+      "type": [
+        "Fire"
+      ],
+      "height": "0.61 m",
+      "weight": "8.5 kg",
+      "candy": "Charmander Candy",
+      "candy_count": 25,
+      "egg": "2 km",
+      "spawn_chance": 0.253,
+      "avg_spawns": 25.3,
+      "spawn_time": "08:45",
+      "multipliers": [
+        1.65
+      ],
+      "weaknesses": [
+        "Water",
+        "Ground",
+        "Rock"
+      ],
+      "next_evolution": [
+        {
+          "num": "005",
+          "name": "Charmeleon"
+        },
+        {
+          "num": "006",
+          "name": "Charizard"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "num": "005",
+      "name": "Charmeleon",
+      "img": "http://www.serebii.net/pokemongo/pokemon/005.png",
+      "type": [
+        "Fire"
+      ],
+      "height": "1.09 m",
+      "weight": "19.0 kg",
+      "candy": "Charmander Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.012,
+      "avg_spawns": 1.2,
+      "spawn_time": "19:00",
+      "multipliers": [
+        1.79
+      ],
+      "weaknesses": [
+        "Water",
+        "Ground",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "004",
+          "name": "Charmander"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "006",
+          "name": "Charizard"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "num": "006",
+      "name": "Charizard",
+      "img": "http://www.serebii.net/pokemongo/pokemon/006.png",
+      "type": [
+        "Fire",
+        "Flying"
+      ],
+      "height": "1.70 m",
+      "weight": "90.5 kg",
+      "candy": "Charmander Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0031,
+      "avg_spawns": 0.31,
+      "spawn_time": "13:34",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Electric",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "004",
+          "name": "Charmander"
+        },
+        {
+          "num": "005",
+          "name": "Charmeleon"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "num": "007",
+      "name": "Squirtle",
+      "img": "http://www.serebii.net/pokemongo/pokemon/007.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.51 m",
+      "weight": "9.0 kg",
+      "candy": "Squirtle Candy",
+      "candy_count": 25,
+      "egg": "2 km",
+      "spawn_chance": 0.58,
+      "avg_spawns": 58,
+      "spawn_time": "04:25",
+      "multipliers": [
+        2.1
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "next_evolution": [
+        {
+          "num": "008",
+          "name": "Wartortle"
+        },
+        {
+          "num": "009",
+          "name": "Blastoise"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "num": "008",
+      "name": "Wartortle",
+      "img": "http://www.serebii.net/pokemongo/pokemon/008.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.99 m",
+      "weight": "22.5 kg",
+      "candy": "Squirtle Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.034,
+      "avg_spawns": 3.4,
+      "spawn_time": "07:02",
+      "multipliers": [
+        1.4
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "prev_evolution": [
+        {
+          "num": "007",
+          "name": "Squirtle"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "009",
+          "name": "Blastoise"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "num": "009",
+      "name": "Blastoise",
+      "img": "http://www.serebii.net/pokemongo/pokemon/009.png",
+      "type": [
+        "Water"
+      ],
+      "height": "1.60 m",
+      "weight": "85.5 kg",
+      "candy": "Squirtle Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0067,
+      "avg_spawns": 0.67,
+      "spawn_time": "00:06",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "prev_evolution": [
+        {
+          "num": "007",
+          "name": "Squirtle"
+        },
+        {
+          "num": "008",
+          "name": "Wartortle"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "num": "010",
+      "name": "Caterpie",
+      "img": "http://www.serebii.net/pokemongo/pokemon/010.png",
+      "type": [
+        "Bug"
+      ],
+      "height": "0.30 m",
+      "weight": "2.9 kg",
+      "candy": "Caterpie Candy",
+      "candy_count": 12,
+      "egg": "2 km",
+      "spawn_chance": 3.032,
+      "avg_spawns": 303.2,
+      "spawn_time": "16:35",
+      "multipliers": [
+        1.05
+      ],
+      "weaknesses": [
+        "Fire",
+        "Flying",
+        "Rock"
+      ],
+      "next_evolution": [
+        {
+          "num": "011",
+          "name": "Metapod"
+        },
+        {
+          "num": "012",
+          "name": "Butterfree"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "num": "011",
+      "name": "Metapod",
+      "img": "http://www.serebii.net/pokemongo/pokemon/011.png",
+      "type": [
+        "Bug"
+      ],
+      "height": "0.71 m",
+      "weight": "9.9 kg",
+      "candy": "Caterpie Candy",
+      "candy_count": 50,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.187,
+      "avg_spawns": 18.7,
+      "spawn_time": "02:11",
+      "multipliers": [
+        3.55,
+        3.79
+      ],
+      "weaknesses": [
+        "Fire",
+        "Flying",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "010",
+          "name": "Caterpie"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "012",
+          "name": "Butterfree"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "num": "012",
+      "name": "Butterfree",
+      "img": "http://www.serebii.net/pokemongo/pokemon/012.png",
+      "type": [
+        "Bug",
+        "Flying"
+      ],
+      "height": "1.09 m",
+      "weight": "32.0 kg",
+      "candy": "Caterpie Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.022,
+      "avg_spawns": 2.2,
+      "spawn_time": "05:23",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Electric",
+        "Ice",
+        "Flying",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "010",
+          "name": "Caterpie"
+        },
+        {
+          "num": "011",
+          "name": "Metapod"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "num": "013",
+      "name": "Weedle",
+      "img": "http://www.serebii.net/pokemongo/pokemon/013.png",
+      "type": [
+        "Bug",
+        "Poison"
+      ],
+      "height": "0.30 m",
+      "weight": "3.2 kg",
+      "candy": "Weedle Candy",
+      "candy_count": 12,
+      "egg": "2 km",
+      "spawn_chance": 7.12,
+      "avg_spawns": 712,
+      "spawn_time": "02:21",
+      "multipliers": [
+        1.01,
+        1.09
+      ],
+      "weaknesses": [
+        "Fire",
+        "Flying",
+        "Psychic",
+        "Rock"
+      ],
+      "next_evolution": [
+        {
+          "num": "014",
+          "name": "Kakuna"
+        },
+        {
+          "num": "015",
+          "name": "Beedrill"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "num": "014",
+      "name": "Kakuna",
+      "img": "http://www.serebii.net/pokemongo/pokemon/014.png",
+      "type": [
+        "Bug",
+        "Poison"
+      ],
+      "height": "0.61 m",
+      "weight": "10.0 kg",
+      "candy": "Weedle Candy",
+      "candy_count": 50,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.44,
+      "avg_spawns": 44,
+      "spawn_time": "02:30",
+      "multipliers": [
+        3.01,
+        3.41
+      ],
+      "weaknesses": [
+        "Fire",
+        "Flying",
+        "Psychic",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "013",
+          "name": "Weedle"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "015",
+          "name": "Beedrill"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "num": "015",
+      "name": "Beedrill",
+      "img": "http://www.serebii.net/pokemongo/pokemon/015.png",
+      "type": [
+        "Bug",
+        "Poison"
+      ],
+      "height": "0.99 m",
+      "weight": "29.5 kg",
+      "candy": "Weedle Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.051,
+      "avg_spawns": 5.1,
+      "spawn_time": "04:50",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Flying",
+        "Psychic",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "013",
+          "name": "Weedle"
+        },
+        {
+          "num": "014",
+          "name": "Kakuna"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "num": "016",
+      "name": "Pidgey",
+      "img": "http://www.serebii.net/pokemongo/pokemon/016.png",
+      "type": [
+        "Normal",
+        "Flying"
+      ],
+      "height": "0.30 m",
+      "weight": "1.8 kg",
+      "candy": "Pidgey Candy",
+      "candy_count": 12,
+      "egg": "2 km",
+      "spawn_chance": 15.98,
+      "avg_spawns": 1.598,
+      "spawn_time": "01:34",
+      "multipliers": [
+        1.71,
+        1.92
+      ],
+      "weaknesses": [
+        "Electric",
+        "Rock"
+      ],
+      "next_evolution": [
+        {
+          "num": "017",
+          "name": "Pidgeotto"
+        },
+        {
+          "num": "018",
+          "name": "Pidgeot"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "num": "017",
+      "name": "Pidgeotto",
+      "img": "http://www.serebii.net/pokemongo/pokemon/017.png",
+      "type": [
+        "Normal",
+        "Flying"
+      ],
+      "height": "1.09 m",
+      "weight": "30.0 kg",
+      "candy": "Pidgey Candy",
+      "candy_count": 50,
+      "egg": "Not in Eggs",
+      "spawn_chance": 1.02,
+      "avg_spawns": 102,
+      "spawn_time": "01:30",
+      "multipliers": [
+        1.79
+      ],
+      "weaknesses": [
+        "Electric",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "016",
+          "name": "Pidgey"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "018",
+          "name": "Pidgeot"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "num": "018",
+      "name": "Pidgeot",
+      "img": "http://www.serebii.net/pokemongo/pokemon/018.png",
+      "type": [
+        "Normal",
+        "Flying"
+      ],
+      "height": "1.50 m",
+      "weight": "39.5 kg",
+      "candy": "Pidgey Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.13,
+      "avg_spawns": 13,
+      "spawn_time": "01:50",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "016",
+          "name": "Pidgey"
+        },
+        {
+          "num": "017",
+          "name": "Pidgeotto"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "num": "019",
+      "name": "Rattata",
+      "img": "http://www.serebii.net/pokemongo/pokemon/019.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "0.30 m",
+      "weight": "3.5 kg",
+      "candy": "Rattata Candy",
+      "candy_count": 25,
+      "egg": "2 km",
+      "spawn_chance": 13.05,
+      "avg_spawns": 1.305,
+      "spawn_time": "01:55",
+      "multipliers": [
+        2.55,
+        2.73
+      ],
+      "weaknesses": [
+        "Fighting"
+      ],
+      "next_evolution": [
+        {
+          "num": "020",
+          "name": "Raticate"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "num": "020",
+      "name": "Raticate",
+      "img": "http://www.serebii.net/pokemongo/pokemon/020.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "0.71 m",
+      "weight": "18.5 kg",
+      "candy": "Rattata Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.41,
+      "avg_spawns": 41,
+      "spawn_time": "01:56",
+      "multipliers": null,
+      "weaknesses": [
+        "Fighting"
+      ],
+      "prev_evolution": [
+        {
+          "num": "019",
+          "name": "Rattata"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "num": "021",
+      "name": "Spearow",
+      "img": "http://www.serebii.net/pokemongo/pokemon/021.png",
+      "type": [
+        "Normal",
+        "Flying"
+      ],
+      "height": "0.30 m",
+      "weight": "2.0 kg",
+      "candy": "Spearow Candy",
+      "candy_count": 50,
+      "egg": "2 km",
+      "spawn_chance": 4.73,
+      "avg_spawns": 473,
+      "spawn_time": "12:25",
+      "multipliers": [
+        2.66,
+        2.68
+      ],
+      "weaknesses": [
+        "Electric",
+        "Rock"
+      ],
+      "next_evolution": [
+        {
+          "num": "022",
+          "name": "Fearow"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "num": "022",
+      "name": "Fearow",
+      "img": "http://www.serebii.net/pokemongo/pokemon/022.png",
+      "type": [
+        "Normal",
+        "Flying"
+      ],
+      "height": "1.19 m",
+      "weight": "38.0 kg",
+      "candy": "Spearow Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.15,
+      "avg_spawns": 15,
+      "spawn_time": "01:11",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "021",
+          "name": "Spearow"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "num": "023",
+      "name": "Ekans",
+      "img": "http://www.serebii.net/pokemongo/pokemon/023.png",
+      "type": [
+        "Poison"
+      ],
+      "height": "2.01 m",
+      "weight": "6.9 kg",
+      "candy": "Ekans Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 2.27,
+      "avg_spawns": 227,
+      "spawn_time": "12:20",
+      "multipliers": [
+        2.21,
+        2.27
+      ],
+      "weaknesses": [
+        "Ground",
+        "Psychic"
+      ],
+      "next_evolution": [
+        {
+          "num": "024",
+          "name": "Arbok"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "num": "024",
+      "name": "Arbok",
+      "img": "http://www.serebii.net/pokemongo/pokemon/024.png",
+      "type": [
+        "Poison"
+      ],
+      "height": "3.51 m",
+      "weight": "65.0 kg",
+      "candy": "Ekans Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.072,
+      "avg_spawns": 7.2,
+      "spawn_time": "01:50",
+      "multipliers": null,
+      "weaknesses": [
+        "Ground",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "023",
+          "name": "Ekans"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "num": "025",
+      "name": "Pikachu",
+      "img": "http://www.serebii.net/pokemongo/pokemon/025.png",
+      "type": [
+        "Electric"
+      ],
+      "height": "0.41 m",
+      "weight": "6.0 kg",
+      "candy": "Pikachu Candy",
+      "candy_count": 50,
+      "egg": "2 km",
+      "spawn_chance": 0.21,
+      "avg_spawns": 21,
+      "spawn_time": "04:00",
+      "multipliers": [
+        2.34
+      ],
+      "weaknesses": [
+        "Ground"
+      ],
+      "next_evolution": [
+        {
+          "num": "026",
+          "name": "Raichu"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "num": "026",
+      "name": "Raichu",
+      "img": "http://www.serebii.net/pokemongo/pokemon/026.png",
+      "type": [
+        "Electric"
+      ],
+      "height": "0.79 m",
+      "weight": "30.0 kg",
+      "candy": "Pikachu Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0076,
+      "avg_spawns": 0.76,
+      "spawn_time": "23:58",
+      "multipliers": null,
+      "weaknesses": [
+        "Ground"
+      ],
+      "prev_evolution": [
+        {
+          "num": "025",
+          "name": "Pikachu"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "num": "027",
+      "name": "Sandshrew",
+      "img": "http://www.serebii.net/pokemongo/pokemon/027.png",
+      "type": [
+        "Ground"
+      ],
+      "height": "0.61 m",
+      "weight": "12.0 kg",
+      "candy": "Sandshrew Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 1.11,
+      "avg_spawns": 111,
+      "spawn_time": "01:58",
+      "multipliers": [
+        2.45
+      ],
+      "weaknesses": [
+        "Water",
+        "Grass",
+        "Ice"
+      ],
+      "next_evolution": [
+        {
+          "num": "028",
+          "name": "Sandslash"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "num": "028",
+      "name": "Sandslash",
+      "img": "http://www.serebii.net/pokemongo/pokemon/028.png",
+      "type": [
+        "Ground"
+      ],
+      "height": "0.99 m",
+      "weight": "29.5 kg",
+      "candy": "Sandshrew Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.037,
+      "avg_spawns": 3.7,
+      "spawn_time": "12:34",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Grass",
+        "Ice"
+      ],
+      "prev_evolution": [
+        {
+          "num": "027",
+          "name": "Sandshrew"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "num": "029",
+      "name": "Nidoran ♀ (Female)",
+      "img": "http://www.serebii.net/pokemongo/pokemon/029.png",
+      "type": [
+        "Poison"
+      ],
+      "height": "0.41 m",
+      "weight": "7.0 kg",
+      "candy": "Nidoran ♀ (Female) Candy",
+      "candy_count": 25,
+      "egg": "5 km",
+      "spawn_chance": 1.38,
+      "avg_spawns": 138,
+      "spawn_time": "01:51",
+      "multipliers": [
+        1.63,
+        2.48
+      ],
+      "weaknesses": [
+        "Ground",
+        "Psychic"
+      ],
+      "next_evolution": [
+        {
+          "num": "030",
+          "name": "Nidorina"
+        },
+        {
+          "num": "031",
+          "name": "Nidoqueen"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "num": "030",
+      "name": "Nidorina",
+      "img": "http://www.serebii.net/pokemongo/pokemon/030.png",
+      "type": [
+        "Poison"
+      ],
+      "height": "0.79 m",
+      "weight": "20.0 kg",
+      "candy": "Nidoran ♀ (Female) Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.088,
+      "avg_spawns": 8.8,
+      "spawn_time": "07:22",
+      "multipliers": [
+        1.83,
+        2.48
+      ],
+      "weaknesses": [
+        "Ground",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "029",
+          "name": "Nidoran(Female)"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "031",
+          "name": "Nidoqueen"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "num": "031",
+      "name": "Nidoqueen",
+      "img": "http://www.serebii.net/pokemongo/pokemon/031.png",
+      "type": [
+        "Poison",
+        "Ground"
+      ],
+      "height": "1.30 m",
+      "weight": "60.0 kg",
+      "candy": "Nidoran ♀ (Female) Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.012,
+      "avg_spawns": 1.2,
+      "spawn_time": "12:35",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Ice",
+        "Ground",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "029",
+          "name": "Nidoran(Female)"
+        },
+        {
+          "num": "030",
+          "name": "Nidorina"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "num": "032",
+      "name": "Nidoran ♂ (Male)",
+      "img": "http://www.serebii.net/pokemongo/pokemon/032.png",
+      "type": [
+        "Poison"
+      ],
+      "height": "0.51 m",
+      "weight": "9.0 kg",
+      "candy": "Nidoran ♂ (Male) Candy",
+      "candy_count": 25,
+      "egg": "5 km",
+      "spawn_chance": 1.31,
+      "avg_spawns": 131,
+      "spawn_time": "01:12",
+      "multipliers": [
+        1.64,
+        1.7
+      ],
+      "weaknesses": [
+        "Ground",
+        "Psychic"
+      ],
+      "next_evolution": [
+        {
+          "num": "033",
+          "name": "Nidorino"
+        },
+        {
+          "num": "034",
+          "name": "Nidoking"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "num": "033",
+      "name": "Nidorino",
+      "img": "http://www.serebii.net/pokemongo/pokemon/033.png",
+      "type": [
+        "Poison"
+      ],
+      "height": "0.89 m",
+      "weight": "19.5 kg",
+      "candy": "Nidoran ♂ (Male) Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.083,
+      "avg_spawns": 8.3,
+      "spawn_time": "09:02",
+      "multipliers": [
+        1.83
+      ],
+      "weaknesses": [
+        "Ground",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "032",
+          "name": "Nidoran(Male)"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "034",
+          "name": "Nidoking"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "num": "034",
+      "name": "Nidoking",
+      "img": "http://www.serebii.net/pokemongo/pokemon/034.png",
+      "type": [
+        "Poison",
+        "Ground"
+      ],
+      "height": "1.40 m",
+      "weight": "62.0 kg",
+      "candy": "Nidoran ♂ (Male) Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.017,
+      "avg_spawns": 1.7,
+      "spawn_time": "12:16",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Ice",
+        "Ground",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "032",
+          "name": "Nidoran(Male)"
+        },
+        {
+          "num": "033",
+          "name": "Nidorino"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "num": "035",
+      "name": "Clefairy",
+      "img": "http://www.serebii.net/pokemongo/pokemon/035.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "0.61 m",
+      "weight": "7.5 kg",
+      "candy": "Clefairy Candy",
+      "candy_count": 50,
+      "egg": "2 km",
+      "spawn_chance": 0.92,
+      "avg_spawns": 92,
+      "spawn_time": "03:30",
+      "multipliers": [
+        2.03,
+        2.14
+      ],
+      "weaknesses": [
+        "Fighting"
+      ],
+      "next_evolution": [
+        {
+          "num": "036",
+          "name": "Clefable"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "num": "036",
+      "name": "Clefable",
+      "img": "http://www.serebii.net/pokemongo/pokemon/036.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "1.30 m",
+      "weight": "40.0 kg",
+      "candy": "Clefairy Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.012,
+      "avg_spawns": 1.2,
+      "spawn_time": "03:29",
+      "multipliers": null,
+      "weaknesses": [
+        "Fighting"
+      ],
+      "prev_evolution": [
+        {
+          "num": "035",
+          "name": "Clefairy"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "num": "037",
+      "name": "Vulpix",
+      "img": "http://www.serebii.net/pokemongo/pokemon/037.png",
+      "type": [
+        "Fire"
+      ],
+      "height": "0.61 m",
+      "weight": "9.9 kg",
+      "candy": "Vulpix Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.22,
+      "avg_spawns": 22,
+      "spawn_time": "13:43",
+      "multipliers": [
+        2.74,
+        2.81
+      ],
+      "weaknesses": [
+        "Water",
+        "Ground",
+        "Rock"
+      ],
+      "next_evolution": [
+        {
+          "num": "038",
+          "name": "Ninetales"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "num": "038",
+      "name": "Ninetales",
+      "img": "http://www.serebii.net/pokemongo/pokemon/038.png",
+      "type": [
+        "Fire"
+      ],
+      "height": "1.09 m",
+      "weight": "19.9 kg",
+      "candy": "Vulpix Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0077,
+      "avg_spawns": 0.77,
+      "spawn_time": "01:32",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Ground",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "037",
+          "name": "Vulpix"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "num": "039",
+      "name": "Jigglypuff",
+      "img": "http://www.serebii.net/pokemongo/pokemon/039.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "0.51 m",
+      "weight": "5.5 kg",
+      "candy": "Jigglypuff Candy",
+      "candy_count": 50,
+      "egg": "2 km",
+      "spawn_chance": 0.39,
+      "avg_spawns": 39,
+      "spawn_time": "08:46",
+      "multipliers": [
+        1.85
+      ],
+      "weaknesses": [
+        "Fighting"
+      ],
+      "next_evolution": [
+        {
+          "num": "040",
+          "name": "Wigglytuff"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "num": "040",
+      "name": "Wigglytuff",
+      "img": "http://www.serebii.net/pokemongo/pokemon/040.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "0.99 m",
+      "weight": "12.0 kg",
+      "candy": "Jigglypuff Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.018,
+      "avg_spawns": 1.8,
+      "spawn_time": "12:28",
+      "multipliers": null,
+      "weaknesses": [
+        "Fighting"
+      ],
+      "prev_evolution": [
+        {
+          "num": "039",
+          "name": "Jigglypuff"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "num": "041",
+      "name": "Zubat",
+      "img": "http://www.serebii.net/pokemongo/pokemon/041.png",
+      "type": [
+        "Poison",
+        "Flying"
+      ],
+      "height": "0.79 m",
+      "weight": "7.5 kg",
+      "candy": "Zubat Candy",
+      "candy_count": 50,
+      "egg": "2 km",
+      "spawn_chance": 6.52,
+      "avg_spawns": 652,
+      "spawn_time": "12:28",
+      "multipliers": [
+        2.6,
+        3.67
+      ],
+      "weaknesses": [
+        "Electric",
+        "Ice",
+        "Psychic",
+        "Rock"
+      ],
+      "next_evolution": [
+        {
+          "num": "042",
+          "name": "Golbat"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "num": "042",
+      "name": "Golbat",
+      "img": "http://www.serebii.net/pokemongo/pokemon/042.png",
+      "type": [
+        "Poison",
+        "Flying"
+      ],
+      "height": "1.60 m",
+      "weight": "55.0 kg",
+      "candy": "Zubat Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.42,
+      "avg_spawns": 42,
+      "spawn_time": "02:15",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Ice",
+        "Psychic",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "041",
+          "name": "Zubat"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "num": "043",
+      "name": "Oddish",
+      "img": "http://www.serebii.net/pokemongo/pokemon/043.png",
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "height": "0.51 m",
+      "weight": "5.4 kg",
+      "candy": "Oddish Candy",
+      "candy_count": 25,
+      "egg": "5 km",
+      "spawn_chance": 1.02,
+      "avg_spawns": 102,
+      "spawn_time": "03:58",
+      "multipliers": [
+        1.5
+      ],
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Flying",
+        "Psychic"
+      ],
+      "next_evolution": [
+        {
+          "num": "044",
+          "name": "Gloom"
+        },
+        {
+          "num": "045",
+          "name": "Vileplume"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "num": "044",
+      "name": "Gloom",
+      "img": "http://www.serebii.net/pokemongo/pokemon/044.png",
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "height": "0.79 m",
+      "weight": "8.6 kg",
+      "candy": "Oddish Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.064,
+      "avg_spawns": 6.4,
+      "spawn_time": "11:33",
+      "multipliers": [
+        1.49
+      ],
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Flying",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "043",
+          "name": "Oddish"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "045",
+          "name": "Vileplume"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "num": "045",
+      "name": "Vileplume",
+      "img": "http://www.serebii.net/pokemongo/pokemon/045.png",
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "height": "1.19 m",
+      "weight": "18.6 kg",
+      "candy": "Oddish Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0097,
+      "avg_spawns": 0.97,
+      "spawn_time": "23:58",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Flying",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "043",
+          "name": "Oddish"
+        },
+        {
+          "num": "044",
+          "name": "Gloom"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "num": "046",
+      "name": "Paras",
+      "img": "http://www.serebii.net/pokemongo/pokemon/046.png",
+      "type": [
+        "Bug",
+        "Grass"
+      ],
+      "height": "0.30 m",
+      "weight": "5.4 kg",
+      "candy": "Paras Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 2.36,
+      "avg_spawns": 236,
+      "spawn_time": "01:42",
+      "multipliers": [
+        2.02
+      ],
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Poison",
+        "Flying",
+        "Bug",
+        "Rock"
+      ],
+      "next_evolution": [
+        {
+          "num": "047",
+          "name": "Parasect"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "num": "047",
+      "name": "Parasect",
+      "img": "http://www.serebii.net/pokemongo/pokemon/047.png",
+      "type": [
+        "Bug",
+        "Grass"
+      ],
+      "height": "0.99 m",
+      "weight": "29.5 kg",
+      "candy": "Paras Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.074,
+      "avg_spawns": 7.4,
+      "spawn_time": "01:22",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Poison",
+        "Flying",
+        "Bug",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "046",
+          "name": "Paras"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "num": "048",
+      "name": "Venonat",
+      "img": "http://www.serebii.net/pokemongo/pokemon/048.png",
+      "type": [
+        "Bug",
+        "Poison"
+      ],
+      "height": "0.99 m",
+      "weight": "30.0 kg",
+      "candy": "Venonat Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 2.28,
+      "avg_spawns": 228,
+      "spawn_time": "02:31",
+      "multipliers": [
+        1.86,
+        1.9
+      ],
+      "weaknesses": [
+        "Fire",
+        "Flying",
+        "Psychic",
+        "Rock"
+      ],
+      "next_evolution": [
+        {
+          "num": "049",
+          "name": "Venomoth"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "num": "049",
+      "name": "Venomoth",
+      "img": "http://www.serebii.net/pokemongo/pokemon/049.png",
+      "type": [
+        "Bug",
+        "Poison"
+      ],
+      "height": "1.50 m",
+      "weight": "12.5 kg",
+      "candy": "Venonat Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.072,
+      "avg_spawns": 7.2,
+      "spawn_time": "23:40",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Flying",
+        "Psychic",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "048",
+          "name": "Venonat"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "num": "050",
+      "name": "Diglett",
+      "img": "http://www.serebii.net/pokemongo/pokemon/050.png",
+      "type": [
+        "Ground"
+      ],
+      "height": "0.20 m",
+      "weight": "0.8 kg",
+      "candy": "Diglett Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.4,
+      "avg_spawns": 40,
+      "spawn_time": "02:22",
+      "multipliers": [
+        2.69
+      ],
+      "weaknesses": [
+        "Water",
+        "Grass",
+        "Ice"
+      ],
+      "next_evolution": [
+        {
+          "num": "051",
+          "name": "Dugtrio"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "num": "051",
+      "name": "Dugtrio",
+      "img": "http://www.serebii.net/pokemongo/pokemon/051.png",
+      "type": [
+        "Ground"
+      ],
+      "height": "0.71 m",
+      "weight": "33.3 kg",
+      "candy": "Dugtrio",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.014,
+      "avg_spawns": 1.4,
+      "spawn_time": "12:37",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Grass",
+        "Ice"
+      ],
+      "prev_evolution": [
+        {
+          "num": "050",
+          "name": "Diglett"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "num": "052",
+      "name": "Meowth",
+      "img": "http://www.serebii.net/pokemongo/pokemon/052.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "0.41 m",
+      "weight": "4.2 kg",
+      "candy": "Meowth Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.86,
+      "avg_spawns": 86,
+      "spawn_time": "02:54",
+      "multipliers": [
+        1.98
+      ],
+      "weaknesses": [
+        "Fighting"
+      ],
+      "next_evolution": [
+        {
+          "num": "053",
+          "name": "Persian"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "num": "053",
+      "name": "Persian",
+      "img": "http://www.serebii.net/pokemongo/pokemon/053.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "0.99 m",
+      "weight": "32.0 kg",
+      "candy": "Meowth Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.022,
+      "avg_spawns": 2.2,
+      "spawn_time": "02:44",
+      "multipliers": null,
+      "weaknesses": [
+        "Fighting"
+      ],
+      "prev_evolution": [
+        {
+          "num": "052",
+          "name": "Meowth"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "num": "054",
+      "name": "Psyduck",
+      "img": "http://www.serebii.net/pokemongo/pokemon/054.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.79 m",
+      "weight": "19.6 kg",
+      "candy": "Psyduck Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 2.54,
+      "avg_spawns": 254,
+      "spawn_time": "03:41",
+      "multipliers": [
+        2.27
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "next_evolution": [
+        {
+          "num": "055",
+          "name": "Golduck"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "num": "055",
+      "name": "Golduck",
+      "img": "http://www.serebii.net/pokemongo/pokemon/055.png",
+      "type": [
+        "Water"
+      ],
+      "height": "1.70 m",
+      "weight": "76.6 kg",
+      "candy": "Psyduck Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.087,
+      "avg_spawns": 8.7,
+      "spawn_time": "23:06",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "prev_evolution": [
+        {
+          "num": "054",
+          "name": "Psyduck"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "num": "056",
+      "name": "Mankey",
+      "img": "http://www.serebii.net/pokemongo/pokemon/056.png",
+      "type": [
+        "Fighting"
+      ],
+      "height": "0.51 m",
+      "weight": "28.0 kg",
+      "candy": "Mankey Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.92,
+      "avg_spawns": 92,
+      "spawn_time": "12:52",
+      "multipliers": [
+        2.17,
+        2.28
+      ],
+      "weaknesses": [
+        "Flying",
+        "Psychic",
+        "Fairy"
+      ],
+      "next_evolution": [
+        {
+          "num": "057",
+          "name": "Primeape"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "num": "057",
+      "name": "Primeape",
+      "img": "http://www.serebii.net/pokemongo/pokemon/057.png",
+      "type": [
+        "Fighting"
+      ],
+      "height": "0.99 m",
+      "weight": "32.0 kg",
+      "candy": "Mankey Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.031,
+      "avg_spawns": 3.1,
+      "spawn_time": "12:33",
+      "multipliers": null,
+      "weaknesses": [
+        "Flying",
+        "Psychic",
+        "Fairy"
+      ],
+      "prev_evolution": [
+        {
+          "num": "056",
+          "name": "Mankey"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "num": "058",
+      "name": "Growlithe",
+      "img": "http://www.serebii.net/pokemongo/pokemon/058.png",
+      "type": [
+        "Fire"
+      ],
+      "height": "0.71 m",
+      "weight": "19.0 kg",
+      "candy": "Growlithe Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.92,
+      "avg_spawns": 92,
+      "spawn_time": "03:57",
+      "multipliers": [
+        2.31,
+        2.36
+      ],
+      "weaknesses": [
+        "Water",
+        "Ground",
+        "Rock"
+      ],
+      "next_evolution": [
+        {
+          "num": "059",
+          "name": "Arcanine"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "num": "059",
+      "name": "Arcanine",
+      "img": "http://www.serebii.net/pokemongo/pokemon/059.png",
+      "type": [
+        "Fire"
+      ],
+      "height": "1.91 m",
+      "weight": "155.0 kg",
+      "candy": "Growlithe Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.017,
+      "avg_spawns": 1.7,
+      "spawn_time": "03:11",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Ground",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "058",
+          "name": "Growlithe"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "num": "060",
+      "name": "Poliwag",
+      "img": "http://www.serebii.net/pokemongo/pokemon/060.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.61 m",
+      "weight": "12.4 kg",
+      "candy": "Poliwag Candy",
+      "candy_count": 25,
+      "egg": "5 km",
+      "spawn_chance": 2.19,
+      "avg_spawns": 219,
+      "spawn_time": "03:40",
+      "multipliers": [
+        1.72,
+        1.73
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "next_evolution": [
+        {
+          "num": "061",
+          "name": "Poliwhirl"
+        },
+        {
+          "num": "062",
+          "name": "Poliwrath"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "num": "061",
+      "name": "Poliwhirl",
+      "img": "http://www.serebii.net/pokemongo/pokemon/061.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.99 m",
+      "weight": "20.0 kg",
+      "candy": "Poliwag Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.13,
+      "avg_spawns": 13,
+      "spawn_time": "09:14",
+      "multipliers": [
+        1.95
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "prev_evolution": [
+        {
+          "num": "060",
+          "name": "Poliwag"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "062",
+          "name": "Poliwrath"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "num": "062",
+      "name": "Poliwrath",
+      "img": "http://www.serebii.net/pokemongo/pokemon/062.png",
+      "type": [
+        "Water",
+        "Fighting"
+      ],
+      "height": "1.30 m",
+      "weight": "54.0 kg",
+      "candy": "Poliwag Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.011,
+      "avg_spawns": 1.1,
+      "spawn_time": "01:32",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass",
+        "Flying",
+        "Psychic",
+        "Fairy"
+      ],
+      "prev_evolution": [
+        {
+          "num": "060",
+          "name": "Poliwag"
+        },
+        {
+          "num": "061",
+          "name": "Poliwhirl"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "num": "063",
+      "name": "Abra",
+      "img": "http://www.serebii.net/pokemongo/pokemon/063.png",
+      "type": [
+        "Psychic"
+      ],
+      "height": "0.89 m",
+      "weight": "19.5 kg",
+      "candy": "Abra Candy",
+      "candy_count": 25,
+      "egg": "5 km",
+      "spawn_chance": 0.42,
+      "avg_spawns": 42,
+      "spawn_time": "04:30",
+      "multipliers": [
+        1.36,
+        1.95
+      ],
+      "weaknesses": [
+        "Bug",
+        "Ghost",
+        "Dark"
+      ],
+      "next_evolution": [
+        {
+          "num": "064",
+          "name": "Kadabra"
+        },
+        {
+          "num": "065",
+          "name": "Alakazam"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "num": "064",
+      "name": "Kadabra",
+      "img": "http://www.serebii.net/pokemongo/pokemon/064.png",
+      "type": [
+        "Psychic"
+      ],
+      "height": "1.30 m",
+      "weight": "56.5 kg",
+      "candy": "Abra Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.027,
+      "avg_spawns": 2.7,
+      "spawn_time": "11:25",
+      "multipliers": [
+        1.4
+      ],
+      "weaknesses": [
+        "Bug",
+        "Ghost",
+        "Dark"
+      ],
+      "prev_evolution": [
+        {
+          "num": "063",
+          "name": "Abra"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "065",
+          "name": "Alakazam"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "num": "065",
+      "name": "Alakazam",
+      "img": "http://www.serebii.net/pokemongo/pokemon/065.png",
+      "type": [
+        "Psychic"
+      ],
+      "height": "1.50 m",
+      "weight": "48.0 kg",
+      "candy": "Abra Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0073,
+      "avg_spawns": 0.73,
+      "spawn_time": "12:33",
+      "multipliers": null,
+      "weaknesses": [
+        "Bug",
+        "Ghost",
+        "Dark"
+      ],
+      "prev_evolution": [
+        {
+          "num": "063",
+          "name": "Abra"
+        },
+        {
+          "num": "064",
+          "name": "Kadabra"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "num": "066",
+      "name": "Machop",
+      "img": "http://www.serebii.net/pokemongo/pokemon/066.png",
+      "type": [
+        "Fighting"
+      ],
+      "height": "0.79 m",
+      "weight": "19.5 kg",
+      "candy": "Machop Candy",
+      "candy_count": 25,
+      "egg": "5 km",
+      "spawn_chance": 0.49,
+      "avg_spawns": 49,
+      "spawn_time": "01:55",
+      "multipliers": [
+        1.64,
+        1.65
+      ],
+      "weaknesses": [
+        "Flying",
+        "Psychic",
+        "Fairy"
+      ],
+      "next_evolution": [
+        {
+          "num": "067",
+          "name": "Machoke"
+        },
+        {
+          "num": "068",
+          "name": "Machamp"
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "num": "067",
+      "name": "Machoke",
+      "img": "http://www.serebii.net/pokemongo/pokemon/067.png",
+      "type": [
+        "Fighting"
+      ],
+      "height": "1.50 m",
+      "weight": "70.5 kg",
+      "candy": "Machop Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.034,
+      "avg_spawns": 3.4,
+      "spawn_time": "10:32",
+      "multipliers": [
+        1.7
+      ],
+      "weaknesses": [
+        "Flying",
+        "Psychic",
+        "Fairy"
+      ],
+      "prev_evolution": [
+        {
+          "num": "066",
+          "name": "Machop"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "068",
+          "name": "Machamp"
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "num": "068",
+      "name": "Machamp",
+      "img": "http://www.serebii.net/pokemongo/pokemon/068.png",
+      "type": [
+        "Fighting"
+      ],
+      "height": "1.60 m",
+      "weight": "130.0 kg",
+      "candy": "Machop Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0068,
+      "avg_spawns": 0.68,
+      "spawn_time": "02:55",
+      "multipliers": null,
+      "weaknesses": [
+        "Flying",
+        "Psychic",
+        "Fairy"
+      ],
+      "prev_evolution": [
+        {
+          "num": "066",
+          "name": "Machop"
+        },
+        {
+          "num": "067",
+          "name": "Machoke"
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "num": "069",
+      "name": "Bellsprout",
+      "img": "http://www.serebii.net/pokemongo/pokemon/069.png",
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "height": "0.71 m",
+      "weight": "4.0 kg",
+      "candy": "Bellsprout Candy",
+      "candy_count": 25,
+      "egg": "5 km",
+      "spawn_chance": 1.15,
+      "avg_spawns": 115,
+      "spawn_time": "04:10",
+      "multipliers": [
+        1.57
+      ],
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Flying",
+        "Psychic"
+      ],
+      "next_evolution": [
+        {
+          "num": "070",
+          "name": "Weepinbell"
+        },
+        {
+          "num": "071",
+          "name": "Victreebel"
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "num": "070",
+      "name": "Weepinbell",
+      "img": "http://www.serebii.net/pokemongo/pokemon/070.png",
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "height": "0.99 m",
+      "weight": "6.4 kg",
+      "candy": "Bellsprout Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.072,
+      "avg_spawns": 7.2,
+      "spawn_time": "09:45",
+      "multipliers": [
+        1.59
+      ],
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Flying",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "069",
+          "name": "Bellsprout"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "071",
+          "name": "Victreebel"
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "num": "071",
+      "name": "Victreebel",
+      "img": "http://www.serebii.net/pokemongo/pokemon/071.png",
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "height": "1.70 m",
+      "weight": "15.5 kg",
+      "candy": "Bellsprout Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0059,
+      "avg_spawns": 0.59,
+      "spawn_time": "12:19",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Flying",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "069",
+          "name": "Bellsprout"
+        },
+        {
+          "num": "070",
+          "name": "Weepinbell"
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "num": "072",
+      "name": "Tentacool",
+      "img": "http://www.serebii.net/pokemongo/pokemon/072.png",
+      "type": [
+        "Water",
+        "Poison"
+      ],
+      "height": "0.89 m",
+      "weight": "45.5 kg",
+      "candy": "Tentacool Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.81,
+      "avg_spawns": 81,
+      "spawn_time": "03:20",
+      "multipliers": [
+        2.52
+      ],
+      "weaknesses": [
+        "Electric",
+        "Ground",
+        "Psychic"
+      ],
+      "next_evolution": [
+        {
+          "num": "073",
+          "name": "Tentacruel"
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "num": "073",
+      "name": "Tentacruel",
+      "img": "http://www.serebii.net/pokemongo/pokemon/073.png",
+      "type": [
+        "Water",
+        "Poison"
+      ],
+      "height": "1.60 m",
+      "weight": "55.0 kg",
+      "candy": "Tentacool Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.082,
+      "avg_spawns": 8.2,
+      "spawn_time": "23:36",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Ground",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "072",
+          "name": "Tentacool"
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "num": "074",
+      "name": "Geodude",
+      "img": "http://www.serebii.net/pokemongo/pokemon/074.png",
+      "type": [
+        "Rock",
+        "Ground"
+      ],
+      "height": "0.41 m",
+      "weight": "20.0 kg",
+      "candy": "Geodude Candy",
+      "candy_count": 25,
+      "egg": "2 km",
+      "spawn_chance": 1.19,
+      "avg_spawns": 119,
+      "spawn_time": "12:40",
+      "multipliers": [
+        1.75,
+        1.76
+      ],
+      "weaknesses": [
+        "Water",
+        "Grass",
+        "Ice",
+        "Fighting",
+        "Ground",
+        "Steel"
+      ],
+      "next_evolution": [
+        {
+          "num": "075",
+          "name": "Graveler"
+        },
+        {
+          "num": "076",
+          "name": "Golem"
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "num": "075",
+      "name": "Graveler",
+      "img": "http://www.serebii.net/pokemongo/pokemon/075.png",
+      "type": [
+        "Rock",
+        "Ground"
+      ],
+      "height": "0.99 m",
+      "weight": "105.0 kg",
+      "candy": "Geodude Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.071,
+      "avg_spawns": 7.1,
+      "spawn_time": "04:53",
+      "multipliers": [
+        1.64,
+        1.72
+      ],
+      "weaknesses": [
+        "Water",
+        "Grass",
+        "Ice",
+        "Fighting",
+        "Ground",
+        "Steel"
+      ],
+      "prev_evolution": [
+        {
+          "num": "074",
+          "name": "Geodude"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "076",
+          "name": "Golem"
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "num": "076",
+      "name": "Golem",
+      "img": "http://www.serebii.net/pokemongo/pokemon/076.png",
+      "type": [
+        "Rock",
+        "Ground"
+      ],
+      "height": "1.40 m",
+      "weight": "300.0 kg",
+      "candy": "Geodude Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0047,
+      "avg_spawns": 0.47,
+      "spawn_time": "12:16",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Grass",
+        "Ice",
+        "Fighting",
+        "Ground",
+        "Steel"
+      ],
+      "prev_evolution": [
+        {
+          "num": "074",
+          "name": "Geodude"
+        },
+        {
+          "num": "075",
+          "name": "Graveler"
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "num": "077",
+      "name": "Ponyta",
+      "img": "http://www.serebii.net/pokemongo/pokemon/077.png",
+      "type": [
+        "Fire"
+      ],
+      "height": "0.99 m",
+      "weight": "30.0 kg",
+      "candy": "Ponyta Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.51,
+      "avg_spawns": 51,
+      "spawn_time": "02:50",
+      "multipliers": [
+        1.48,
+        1.5
+      ],
+      "weaknesses": [
+        "Water",
+        "Ground",
+        "Rock"
+      ],
+      "next_evolution": [
+        {
+          "num": "078",
+          "name": "Rapidash"
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "num": "078",
+      "name": "Rapidash",
+      "img": "http://www.serebii.net/pokemongo/pokemon/078.png",
+      "type": [
+        "Fire"
+      ],
+      "height": "1.70 m",
+      "weight": "95.0 kg",
+      "candy": "Ponyta Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.011,
+      "avg_spawns": 1.1,
+      "spawn_time": "04:00",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Ground",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "077",
+          "name": "Ponyta"
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "num": "079",
+      "name": "Slowpoke",
+      "img": "http://www.serebii.net/pokemongo/pokemon/079.png",
+      "type": [
+        "Water",
+        "Psychic"
+      ],
+      "height": "1.19 m",
+      "weight": "36.0 kg",
+      "candy": "Slowpoke Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 1.05,
+      "avg_spawns": 105,
+      "spawn_time": "07:12",
+      "multipliers": [
+        2.21
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass",
+        "Bug",
+        "Ghost",
+        "Dark"
+      ],
+      "next_evolution": [
+        {
+          "num": "080",
+          "name": "Slowbro"
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "num": "080",
+      "name": "Slowbro",
+      "img": "http://www.serebii.net/pokemongo/pokemon/080.png",
+      "type": [
+        "Water",
+        "Psychic"
+      ],
+      "height": "1.60 m",
+      "weight": "78.5 kg",
+      "candy": "Slowpoke Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.036,
+      "avg_spawns": 3.6,
+      "spawn_time": "02:56",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass",
+        "Bug",
+        "Ghost",
+        "Dark"
+      ],
+      "prev_evolution": [
+        {
+          "num": "079",
+          "name": "Slowpoke"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "num": "081",
+      "name": "Magnemite",
+      "img": "http://www.serebii.net/pokemongo/pokemon/081.png",
+      "type": [
+        "Electric"
+      ],
+      "height": "0.30 m",
+      "weight": "6.0 kg",
+      "candy": "Magnemite Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.71,
+      "avg_spawns": 71,
+      "spawn_time": "04:04",
+      "multipliers": [
+        2.16,
+        2.17
+      ],
+      "weaknesses": [
+        "Fire",
+        "Water",
+        "Ground"
+      ],
+      "next_evolution": [
+        {
+          "num": "082",
+          "name": "Magneton"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "num": "082",
+      "name": "Magneton",
+      "img": "http://www.serebii.net/pokemongo/pokemon/082.png",
+      "type": [
+        "Electric"
+      ],
+      "height": "0.99 m",
+      "weight": "60.0 kg",
+      "candy": "Magnemite Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.023,
+      "avg_spawns": 2.3,
+      "spawn_time": "15:25",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Water",
+        "Ground"
+      ],
+      "prev_evolution": [
+        {
+          "num": "081",
+          "name": "Magnemite"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "num": "083",
+      "name": "Farfetch'd",
+      "img": "http://www.serebii.net/pokemongo/pokemon/083.png",
+      "type": [
+        "Normal",
+        "Flying"
+      ],
+      "height": "0.79 m",
+      "weight": "15.0 kg",
+      "candy": "None",
+      "egg": "5 km",
+      "spawn_chance": 0.0212,
+      "avg_spawns": 2.12,
+      "spawn_time": "01:09",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Rock"
+      ]
+    },
+    {
+      "id": 84,
+      "num": "084",
+      "name": "Doduo",
+      "img": "http://www.serebii.net/pokemongo/pokemon/084.png",
+      "type": [
+        "Normal",
+        "Flying"
+      ],
+      "height": "1.40 m",
+      "weight": "39.2 kg",
+      "candy": "Doduo Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.52,
+      "avg_spawns": 52,
+      "spawn_time": "05:10",
+      "multipliers": [
+        2.19,
+        2.24
+      ],
+      "weaknesses": [
+        "Electric",
+        "Rock"
+      ],
+      "next_evolution": [
+        {
+          "num": "085",
+          "name": "Dodrio"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "num": "085",
+      "name": "Dodrio",
+      "img": "http://www.serebii.net/pokemongo/pokemon/085.png",
+      "type": [
+        "Normal",
+        "Flying"
+      ],
+      "height": "1.80 m",
+      "weight": "85.2 kg",
+      "candy": "Doduo Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.22,
+      "avg_spawns": 22,
+      "spawn_time": "02:12",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "084",
+          "name": "Doduo"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "num": "086",
+      "name": "Seel",
+      "img": "http://www.serebii.net/pokemongo/pokemon/086.png",
+      "type": [
+        "Water"
+      ],
+      "height": "1.09 m",
+      "weight": "90.0 kg",
+      "candy": "Seel Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.28,
+      "avg_spawns": 28,
+      "spawn_time": "06:46",
+      "multipliers": [
+        1.04,
+        1.96
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "next_evolution": [
+        {
+          "num": "087",
+          "name": "Dewgong"
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "num": "087",
+      "name": "Dewgong",
+      "img": "http://www.serebii.net/pokemongo/pokemon/087.png",
+      "type": [
+        "Water",
+        "Ice"
+      ],
+      "height": "1.70 m",
+      "weight": "120.0 kg",
+      "candy": "Seel Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.013,
+      "avg_spawns": 1.3,
+      "spawn_time": "06:04",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass",
+        "Fighting",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "086",
+          "name": "Seel"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "num": "088",
+      "name": "Grimer",
+      "img": "http://www.serebii.net/pokemongo/pokemon/088.png",
+      "type": [
+        "Poison"
+      ],
+      "height": "0.89 m",
+      "weight": "30.0 kg",
+      "candy": "Grimer Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.052,
+      "avg_spawns": 5.2,
+      "spawn_time": "15:11",
+      "multipliers": [
+        2.44
+      ],
+      "weaknesses": [
+        "Ground",
+        "Psychic"
+      ],
+      "next_evolution": [
+        {
+          "num": "089",
+          "name": "Muk"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "num": "089",
+      "name": "Muk",
+      "img": "http://www.serebii.net/pokemongo/pokemon/089.png",
+      "type": [
+        "Poison"
+      ],
+      "height": "1.19 m",
+      "weight": "30.0 kg",
+      "candy": "Grimer Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0031,
+      "avg_spawns": 0.31,
+      "spawn_time": "01:28",
+      "multipliers": null,
+      "weaknesses": [
+        "Ground",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "088",
+          "name": "Grimer"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "num": "090",
+      "name": "Shellder",
+      "img": "http://www.serebii.net/pokemongo/pokemon/090.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.30 m",
+      "weight": "4.0 kg",
+      "candy": "Shellder Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.52,
+      "avg_spawns": 52,
+      "spawn_time": "07:39",
+      "multipliers": [
+        2.65
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "next_evolution": [
+        {
+          "num": "091",
+          "name": "Cloyster"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "num": "091",
+      "name": "Cloyster",
+      "img": "http://www.serebii.net/pokemongo/pokemon/091.png",
+      "type": [
+        "Water",
+        "Ice"
+      ],
+      "height": "1.50 m",
+      "weight": "132.5 kg",
+      "candy": "Shellder Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.015,
+      "avg_spawns": 1.5,
+      "spawn_time": "02:33",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass",
+        "Fighting",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "090",
+          "name": "Shellder"
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "num": "092",
+      "name": "Gastly",
+      "img": "http://www.serebii.net/pokemongo/pokemon/092.png",
+      "type": [
+        "Ghost",
+        "Poison"
+      ],
+      "height": "1.30 m",
+      "weight": "0.1 kg",
+      "candy": "Gastly Candy",
+      "candy_count": 25,
+      "egg": "5 km",
+      "spawn_chance": 0.79,
+      "avg_spawns": 79,
+      "spawn_time": "04:21",
+      "multipliers": [
+        1.78
+      ],
+      "weaknesses": [
+        "Ground",
+        "Psychic",
+        "Ghost",
+        "Dark"
+      ],
+      "next_evolution": [
+        {
+          "num": "093",
+          "name": "Haunter"
+        },
+        {
+          "num": "094",
+          "name": "Gengar"
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "num": "093",
+      "name": "Haunter",
+      "img": "http://www.serebii.net/pokemongo/pokemon/093.png",
+      "type": [
+        "Ghost",
+        "Poison"
+      ],
+      "height": "1.60 m",
+      "weight": "0.1 kg",
+      "candy": "Gastly Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.052,
+      "avg_spawns": 5.2,
+      "spawn_time": "00:10",
+      "multipliers": [
+        1.56,
+        1.8
+      ],
+      "weaknesses": [
+        "Ground",
+        "Psychic",
+        "Ghost",
+        "Dark"
+      ],
+      "prev_evolution": [
+        {
+          "num": "092",
+          "name": "Gastly"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "094",
+          "name": "Gengar"
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "num": "094",
+      "name": "Gengar",
+      "img": "http://www.serebii.net/pokemongo/pokemon/094.png",
+      "type": [
+        "Ghost",
+        "Poison"
+      ],
+      "height": "1.50 m",
+      "weight": "40.5 kg",
+      "candy": "Gastly Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0067,
+      "avg_spawns": 0.67,
+      "spawn_time": "03:55",
+      "multipliers": null,
+      "weaknesses": [
+        "Ground",
+        "Psychic",
+        "Ghost",
+        "Dark"
+      ],
+      "prev_evolution": [
+        {
+          "num": "092",
+          "name": "Gastly"
+        },
+        {
+          "num": "093",
+          "name": "Haunter"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "num": "095",
+      "name": "Onix",
+      "img": "http://www.serebii.net/pokemongo/pokemon/095.png",
+      "type": [
+        "Rock",
+        "Ground"
+      ],
+      "height": "8.79 m",
+      "weight": "210.0 kg",
+      "candy": "None",
+      "egg": "10 km",
+      "spawn_chance": 0.1,
+      "avg_spawns": 10,
+      "spawn_time": "01:18",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Grass",
+        "Ice",
+        "Fighting",
+        "Ground",
+        "Steel"
+      ]
+    },
+    {
+      "id": 96,
+      "num": "096",
+      "name": "Drowzee",
+      "img": "http://www.serebii.net/pokemongo/pokemon/096.png",
+      "type": [
+        "Psychic"
+      ],
+      "height": "0.99 m",
+      "weight": "32.4 kg",
+      "candy": "Drowzee Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 3.21,
+      "avg_spawns": 321,
+      "spawn_time": "01:51",
+      "multipliers": [
+        2.08,
+        2.09
+      ],
+      "weaknesses": [
+        "Bug",
+        "Ghost",
+        "Dark"
+      ],
+      "next_evolution": [
+        {
+          "num": "097",
+          "name": "Hypno"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "num": "097",
+      "name": "Hypno",
+      "img": "http://www.serebii.net/pokemongo/pokemon/097.png",
+      "type": [
+        "Psychic"
+      ],
+      "height": "1.60 m",
+      "weight": "75.6 kg",
+      "candy": "Drowzee Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.1,
+      "avg_spawns": 10,
+      "spawn_time": "02:17",
+      "multipliers": null,
+      "weaknesses": [
+        "Bug",
+        "Ghost",
+        "Dark"
+      ],
+      "prev_evolution": [
+        {
+          "num": "096",
+          "name": "Drowzee"
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "num": "098",
+      "name": "Krabby",
+      "img": "http://www.serebii.net/pokemongo/pokemon/098.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.41 m",
+      "weight": "6.5 kg",
+      "candy": "Krabby Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 2.12,
+      "avg_spawns": 212,
+      "spawn_time": "03:33",
+      "multipliers": [
+        2.36,
+        2.4
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "next_evolution": [
+        {
+          "num": "099",
+          "name": "Kingler"
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "num": "099",
+      "name": "Kingler",
+      "img": "http://www.serebii.net/pokemongo/pokemon/099.png",
+      "type": [
+        "Water"
+      ],
+      "height": "1.30 m",
+      "weight": "60.0 kg",
+      "candy": "Krabby Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.062,
+      "avg_spawns": 6.2,
+      "spawn_time": "03:44",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "prev_evolution": [
+        {
+          "num": "098",
+          "name": "Krabby"
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "num": "100",
+      "name": "Voltorb",
+      "img": "http://www.serebii.net/pokemongo/pokemon/100.png",
+      "type": [
+        "Electric"
+      ],
+      "height": "0.51 m",
+      "weight": "10.4 kg",
+      "candy": "Voltorb Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.65,
+      "avg_spawns": 65,
+      "spawn_time": "04:36",
+      "multipliers": [
+        2.01,
+        2.02
+      ],
+      "weaknesses": [
+        "Ground"
+      ],
+      "next_evolution": [
+        {
+          "num": "101",
+          "name": "Electrode"
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "num": "101",
+      "name": "Electrode",
+      "img": "http://www.serebii.net/pokemongo/pokemon/101.png",
+      "type": [
+        "Electric"
+      ],
+      "height": "1.19 m",
+      "weight": "66.6 kg",
+      "candy": "Voltorb Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.02,
+      "avg_spawns": 2,
+      "spawn_time": "04:10",
+      "multipliers": null,
+      "weaknesses": [
+        "Ground"
+      ],
+      "prev_evolution": [
+        {
+          "num": "100",
+          "name": "Voltorb"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "num": "102",
+      "name": "Exeggcute",
+      "img": "http://www.serebii.net/pokemongo/pokemon/102.png",
+      "type": [
+        "Grass",
+        "Psychic"
+      ],
+      "height": "0.41 m",
+      "weight": "2.5 kg",
+      "candy": "Exeggcute Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.78,
+      "avg_spawns": 78,
+      "spawn_time": "09:09",
+      "multipliers": [
+        2.7,
+        3.18
+      ],
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Poison",
+        "Flying",
+        "Bug",
+        "Ghost",
+        "Dark"
+      ],
+      "next_evolution": [
+        {
+          "num": "103",
+          "name": "Exeggutor"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "num": "103",
+      "name": "Exeggutor",
+      "img": "http://www.serebii.net/pokemongo/pokemon/103.png",
+      "type": [
+        "Grass",
+        "Psychic"
+      ],
+      "height": "2.01 m",
+      "weight": "120.0 kg",
+      "candy": "Exeggcute Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.014,
+      "avg_spawns": 1.4,
+      "spawn_time": "12:34",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Poison",
+        "Flying",
+        "Bug",
+        "Ghost",
+        "Dark"
+      ],
+      "prev_evolution": [
+        {
+          "num": "102",
+          "name": "Exeggcute"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "num": "104",
+      "name": "Cubone",
+      "img": "http://www.serebii.net/pokemongo/pokemon/104.png",
+      "type": [
+        "Ground"
+      ],
+      "height": "0.41 m",
+      "weight": "6.5 kg",
+      "candy": "Cubone Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.61,
+      "avg_spawns": 61,
+      "spawn_time": "01:51",
+      "multipliers": [
+        1.67
+      ],
+      "weaknesses": [
+        "Water",
+        "Grass",
+        "Ice"
+      ],
+      "next_evolution": [
+        {
+          "num": "105",
+          "name": "Marowak"
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "num": "105",
+      "name": "Marowak",
+      "img": "http://www.serebii.net/pokemongo/pokemon/105.png",
+      "type": [
+        "Ground"
+      ],
+      "height": "0.99 m",
+      "weight": "45.0 kg",
+      "candy": "Cubone Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.02,
+      "avg_spawns": 2,
+      "spawn_time": "03:59",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Grass",
+        "Ice"
+      ],
+      "prev_evolution": [
+        {
+          "num": "104",
+          "name": "Cubone"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "num": "106",
+      "name": "Hitmonlee",
+      "img": "http://www.serebii.net/pokemongo/pokemon/106.png",
+      "type": [
+        "Fighting"
+      ],
+      "height": "1.50 m",
+      "weight": "49.8 kg",
+      "candy": "None",
+      "egg": "10 km",
+      "spawn_chance": 0.02,
+      "avg_spawns": 2,
+      "spawn_time": "03:59",
+      "multipliers": null,
+      "weaknesses": [
+        "Flying",
+        "Psychic",
+        "Fairy"
+      ]
+    },
+    {
+      "id": 107,
+      "num": "107",
+      "name": "Hitmonchan",
+      "img": "http://www.serebii.net/pokemongo/pokemon/107.png",
+      "type": [
+        "Fighting"
+      ],
+      "height": "1.40 m",
+      "weight": "50.2 kg",
+      "candy": "None",
+      "egg": "10 km",
+      "spawn_chance": 0.022,
+      "avg_spawns": 2.2,
+      "spawn_time": "05:58",
+      "multipliers": null,
+      "weaknesses": [
+        "Flying",
+        "Psychic",
+        "Fairy"
+      ]
+    },
+    {
+      "id": 108,
+      "num": "108",
+      "name": "Lickitung",
+      "img": "http://www.serebii.net/pokemongo/pokemon/108.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "1.19 m",
+      "weight": "65.5 kg",
+      "candy": "None",
+      "egg": "5 km",
+      "spawn_chance": 0.011,
+      "avg_spawns": 1.1,
+      "spawn_time": "02:46",
+      "multipliers": null,
+      "weaknesses": [
+        "Fighting"
+      ]
+    },
+    {
+      "id": 109,
+      "num": "109",
+      "name": "Koffing",
+      "img": "http://www.serebii.net/pokemongo/pokemon/109.png",
+      "type": [
+        "Poison"
+      ],
+      "height": "0.61 m",
+      "weight": "1.0 kg",
+      "candy": "Koffing Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.2,
+      "avg_spawns": 20,
+      "spawn_time": "08:16",
+      "multipliers": [
+        1.11
+      ],
+      "weaknesses": [
+        "Ground",
+        "Psychic"
+      ],
+      "next_evolution": [
+        {
+          "num": "110",
+          "name": "Weezing"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "num": "110",
+      "name": "Weezing",
+      "img": "http://www.serebii.net/pokemongo/pokemon/110.png",
+      "type": [
+        "Poison"
+      ],
+      "height": "1.19 m",
+      "weight": "9.5 kg",
+      "candy": "Koffing Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.016,
+      "avg_spawns": 1.6,
+      "spawn_time": "12:17",
+      "multipliers": null,
+      "weaknesses": [
+        "Ground",
+        "Psychic"
+      ],
+      "prev_evolution": [
+        {
+          "num": "109",
+          "name": "Koffing"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "num": "111",
+      "name": "Rhyhorn",
+      "img": "http://www.serebii.net/pokemongo/pokemon/111.png",
+      "type": [
+        "Ground",
+        "Rock"
+      ],
+      "height": "0.99 m",
+      "weight": "115.0 kg",
+      "candy": "Rhyhorn Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 0.63,
+      "avg_spawns": 63,
+      "spawn_time": "03:21",
+      "multipliers": [
+        1.91
+      ],
+      "weaknesses": [
+        "Water",
+        "Grass",
+        "Ice",
+        "Fighting",
+        "Ground",
+        "Steel"
+      ],
+      "next_evolution": [
+        {
+          "num": "112",
+          "name": "Rhydon"
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "num": "112",
+      "name": "Rhydon",
+      "img": "http://www.serebii.net/pokemongo/pokemon/112.png",
+      "type": [
+        "Ground",
+        "Rock"
+      ],
+      "height": "1.91 m",
+      "weight": "120.0 kg",
+      "candy": "Rhyhorn Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.022,
+      "avg_spawns": 2.2,
+      "spawn_time": "05:50",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Grass",
+        "Ice",
+        "Fighting",
+        "Ground",
+        "Steel"
+      ],
+      "prev_evolution": [
+        {
+          "num": "111",
+          "name": "Rhyhorn"
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "num": "113",
+      "name": "Chansey",
+      "img": "http://www.serebii.net/pokemongo/pokemon/113.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "1.09 m",
+      "weight": "34.6 kg",
+      "candy": "None",
+      "egg": "10 km",
+      "spawn_chance": 0.013,
+      "avg_spawns": 1.3,
+      "spawn_time": "04:46",
+      "multipliers": null,
+      "weaknesses": [
+        "Fighting"
+      ]
+    },
+    {
+      "id": 114,
+      "num": "114",
+      "name": "Tangela",
+      "img": "http://www.serebii.net/pokemongo/pokemon/114.png",
+      "type": [
+        "Grass"
+      ],
+      "height": "0.99 m",
+      "weight": "35.0 kg",
+      "candy": "None",
+      "egg": "5 km",
+      "spawn_chance": 0.228,
+      "avg_spawns": 22.8,
+      "spawn_time": "23:13",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Ice",
+        "Poison",
+        "Flying",
+        "Bug"
+      ]
+    },
+    {
+      "id": 115,
+      "num": "115",
+      "name": "Kangaskhan",
+      "img": "http://www.serebii.net/pokemongo/pokemon/115.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "2.21 m",
+      "weight": "80.0 kg",
+      "candy": "None",
+      "egg": "5 km",
+      "spawn_chance": 0.0086,
+      "avg_spawns": 0.86,
+      "spawn_time": "02:40",
+      "multipliers": null,
+      "weaknesses": [
+        "Fighting"
+      ]
+    },
+    {
+      "id": 116,
+      "num": "116",
+      "name": "Horsea",
+      "img": "http://www.serebii.net/pokemongo/pokemon/116.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.41 m",
+      "weight": "8.0 kg",
+      "candy": "Horsea Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 1.13,
+      "avg_spawns": 113,
+      "spawn_time": "02:53",
+      "multipliers": [
+        2.23
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "next_evolution": [
+        {
+          "num": "117",
+          "name": "Seadra"
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "num": "117",
+      "name": "Seadra",
+      "img": "http://www.serebii.net/pokemongo/pokemon/117.png",
+      "type": [
+        "Water"
+      ],
+      "height": "1.19 m",
+      "weight": "25.0 kg",
+      "candy": "Horsea Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.034,
+      "avg_spawns": 3.4,
+      "spawn_time": "03:18",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "prev_evolution": [
+        {
+          "num": "116",
+          "name": "Horsea"
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "num": "118",
+      "name": "Goldeen",
+      "img": "http://www.serebii.net/pokemongo/pokemon/118.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.61 m",
+      "weight": "15.0 kg",
+      "candy": "Goldeen Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 2.18,
+      "avg_spawns": 218,
+      "spawn_time": "03:14",
+      "multipliers": [
+        2.15,
+        2.2
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "next_evolution": [
+        {
+          "num": "119",
+          "name": "Seaking"
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "num": "119",
+      "name": "Seaking",
+      "img": "http://www.serebii.net/pokemongo/pokemon/119.png",
+      "type": [
+        "Water"
+      ],
+      "height": "1.30 m",
+      "weight": "39.0 kg",
+      "candy": "Goldeen Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.08,
+      "avg_spawns": 8,
+      "spawn_time": "05:21",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "prev_evolution": [
+        {
+          "num": "118",
+          "name": "Goldeen"
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "num": "120",
+      "name": "Staryu",
+      "img": "http://www.serebii.net/pokemongo/pokemon/120.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.79 m",
+      "weight": "34.5 kg",
+      "candy": "Staryu Candy",
+      "candy_count": 50,
+      "egg": "5 km",
+      "spawn_chance": 1.95,
+      "avg_spawns": 195,
+      "spawn_time": "22:59",
+      "multipliers": [
+        2.38,
+        2.41
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "next_evolution": [
+        {
+          "num": "121",
+          "name": "Starmie"
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "num": "121",
+      "name": "Starmie",
+      "img": "http://www.serebii.net/pokemongo/pokemon/121.png",
+      "type": [
+        "Water",
+        "Psychic"
+      ],
+      "height": "1.09 m",
+      "weight": "80.0 kg",
+      "candy": "Staryu Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.034,
+      "avg_spawns": 3.4,
+      "spawn_time": "06:57",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass",
+        "Bug",
+        "Ghost",
+        "Dark"
+      ],
+      "prev_evolution": [
+        {
+          "num": "120",
+          "name": "Staryu"
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "num": "122",
+      "name": "Mr. Mime",
+      "img": "http://www.serebii.net/pokemongo/pokemon/122.png",
+      "type": [
+        "Psychic"
+      ],
+      "height": "1.30 m",
+      "weight": "54.5 kg",
+      "candy": "None",
+      "egg": "10 km",
+      "spawn_chance": 0.0031,
+      "avg_spawns": 0.31,
+      "spawn_time": "01:51",
+      "multipliers": null,
+      "weaknesses": [
+        "Bug",
+        "Ghost",
+        "Dark"
+      ]
+    },
+    {
+      "id": 123,
+      "num": "123",
+      "name": "Scyther",
+      "img": "http://www.serebii.net/pokemongo/pokemon/123.png",
+      "type": [
+        "Bug",
+        "Flying"
+      ],
+      "height": "1.50 m",
+      "weight": "56.0 kg",
+      "candy": "None",
+      "egg": "10 km",
+      "spawn_chance": 0.14,
+      "avg_spawns": 14,
+      "spawn_time": "05:43",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Electric",
+        "Ice",
+        "Flying",
+        "Rock"
+      ]
+    },
+    {
+      "id": 124,
+      "num": "124",
+      "name": "Jynx",
+      "img": "http://www.serebii.net/pokemongo/pokemon/124.png",
+      "type": [
+        "Ice",
+        "Psychic"
+      ],
+      "height": "1.40 m",
+      "weight": "40.6 kg",
+      "candy": "None",
+      "egg": "10 km",
+      "spawn_chance": 0.35,
+      "avg_spawns": 35,
+      "spawn_time": "05:41",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Bug",
+        "Rock",
+        "Ghost",
+        "Dark",
+        "Steel"
+      ]
+    },
+    {
+      "id": 125,
+      "num": "125",
+      "name": "Electabuzz",
+      "img": "http://www.serebii.net/pokemongo/pokemon/125.png",
+      "type": [
+        "Electric"
+      ],
+      "height": "1.09 m",
+      "weight": "30.0 kg",
+      "candy": "None",
+      "egg": "10 km",
+      "spawn_chance": 0.074,
+      "avg_spawns": 7.4,
+      "spawn_time": "04:28",
+      "multipliers": null,
+      "weaknesses": [
+        "Ground"
+      ]
+    },
+    {
+      "id": 126,
+      "num": "126",
+      "name": "Magmar",
+      "img": "http://www.serebii.net/pokemongo/pokemon/126.png",
+      "type": [
+        "Fire"
+      ],
+      "height": "1.30 m",
+      "weight": "44.5 kg",
+      "candy": "None",
+      "egg": "10 km",
+      "spawn_chance": 0.1,
+      "avg_spawns": 10,
+      "spawn_time": "20:36",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Ground",
+        "Rock"
+      ]
+    },
+    {
+      "id": 127,
+      "num": "127",
+      "name": "Pinsir",
+      "img": "http://www.serebii.net/pokemongo/pokemon/127.png",
+      "type": [
+        "Bug"
+      ],
+      "height": "1.50 m",
+      "weight": "55.0 kg",
+      "candy": "None",
+      "egg": "10 km",
+      "spawn_chance": 0.99,
+      "avg_spawns": 99,
+      "spawn_time": "03:25",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Flying",
+        "Rock"
+      ]
+    },
+    {
+      "id": 128,
+      "num": "128",
+      "name": "Tauros",
+      "img": "http://www.serebii.net/pokemongo/pokemon/128.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "1.40 m",
+      "weight": "88.4 kg",
+      "candy": "None",
+      "egg": "5 km",
+      "spawn_chance": 0.12,
+      "avg_spawns": 12,
+      "spawn_time": "00:37",
+      "multipliers": null,
+      "weaknesses": [
+        "Fighting"
+      ]
+    },
+    {
+      "id": 129,
+      "num": "129",
+      "name": "Magikarp",
+      "img": "http://www.serebii.net/pokemongo/pokemon/129.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.89 m",
+      "weight": "10.0 kg",
+      "candy": "Magikarp Candy",
+      "candy_count": 400,
+      "egg": "2 km",
+      "spawn_chance": 4.78,
+      "avg_spawns": 478,
+      "spawn_time": "14:26",
+      "multipliers": [
+        10.1,
+        11.8
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "next_evolution": [
+        {
+          "num": "130",
+          "name": "Gyarados"
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "num": "130",
+      "name": "Gyarados",
+      "img": "http://www.serebii.net/pokemongo/pokemon/130.png",
+      "type": [
+        "Water",
+        "Flying"
+      ],
+      "height": "6.50 m",
+      "weight": "235.0 kg",
+      "candy": "Magikarp Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0032,
+      "avg_spawns": 0.32,
+      "spawn_time": "02:15",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "129",
+          "name": "Magikarp"
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "num": "131",
+      "name": "Lapras",
+      "img": "http://www.serebii.net/pokemongo/pokemon/131.png",
+      "type": [
+        "Water",
+        "Ice"
+      ],
+      "height": "2.49 m",
+      "weight": "220.0 kg",
+      "candy": "None",
+      "egg": "10 km",
+      "spawn_chance": 0.006,
+      "avg_spawns": 0.6,
+      "spawn_time": "08:59",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass",
+        "Fighting",
+        "Rock"
+      ]
+    },
+    {
+      "id": 132,
+      "num": "132",
+      "name": "Ditto",
+      "img": "http://www.serebii.net/pokemongo/pokemon/132.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "0.30 m",
+      "weight": "4.0 kg",
+      "candy": "None",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0,
+      "avg_spawns": 0,
+      "spawn_time": "N/A",
+      "multipliers": null,
+      "weaknesses": [
+        "Fighting"
+      ]
+    },
+    {
+      "id": 133,
+      "num": "133",
+      "name": "Eevee",
+      "img": "http://www.serebii.net/pokemongo/pokemon/133.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "0.30 m",
+      "weight": "6.5 kg",
+      "candy": "Eevee Candy",
+      "candy_count": 25,
+      "egg": "10 km",
+      "spawn_chance": 2.75,
+      "avg_spawns": 275,
+      "spawn_time": "05:32",
+      "multipliers": [
+        2.02,
+        2.64
+      ],
+      "weaknesses": [
+        "Fighting"
+      ],
+      "next_evolution": [
+        {
+          "num": "134",
+          "name": "Vaporeon"
+        },
+        {
+          "num": "135",
+          "name": "Jolteon"
+        },
+        {
+          "num": "136",
+          "name": "Flareon"
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "num": "134",
+      "name": "Vaporeon",
+      "img": "http://www.serebii.net/pokemongo/pokemon/134.png",
+      "type": [
+        "Water"
+      ],
+      "height": "0.99 m",
+      "weight": "29.0 kg",
+      "candy": "Eevee Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.014,
+      "avg_spawns": 1.4,
+      "spawn_time": "10:54",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass"
+      ],
+      "prev_evolution": [
+        {
+          "num": "133",
+          "name": "Eevee"
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "num": "135",
+      "name": "Jolteon",
+      "img": "http://www.serebii.net/pokemongo/pokemon/135.png",
+      "type": [
+        "Electric"
+      ],
+      "height": "0.79 m",
+      "weight": "24.5 kg",
+      "candy": "None",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.012,
+      "avg_spawns": 1.2,
+      "spawn_time": "02:30",
+      "multipliers": null,
+      "weaknesses": [
+        "Ground"
+      ],
+      "prev_evolution": [
+        {
+          "num": "133",
+          "name": "Eevee"
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "num": "136",
+      "name": "Flareon",
+      "img": "http://www.serebii.net/pokemongo/pokemon/136.png",
+      "type": [
+        "Fire"
+      ],
+      "height": "0.89 m",
+      "weight": "25.0 kg",
+      "candy": "Eevee Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.017,
+      "avg_spawns": 1.7,
+      "spawn_time": "07:02",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Ground",
+        "Rock"
+      ],
+      "prev_evolution": [
+        {
+          "num": "133",
+          "name": "Eevee"
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "num": "137",
+      "name": "Porygon",
+      "img": "http://www.serebii.net/pokemongo/pokemon/137.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "0.79 m",
+      "weight": "36.5 kg",
+      "candy": "None",
+      "egg": "5 km",
+      "spawn_chance": 0.012,
+      "avg_spawns": 1.2,
+      "spawn_time": "02:49",
+      "multipliers": null,
+      "weaknesses": [
+        "Fighting"
+      ]
+    },
+    {
+      "id": 138,
+      "num": "138",
+      "name": "Omanyte",
+      "img": "http://www.serebii.net/pokemongo/pokemon/138.png",
+      "type": [
+        "Rock",
+        "Water"
+      ],
+      "height": "0.41 m",
+      "weight": "7.5 kg",
+      "candy": "Omanyte Candy",
+      "candy_count": 50,
+      "egg": "10 km",
+      "spawn_chance": 0.14,
+      "avg_spawns": 14,
+      "spawn_time": "10:23",
+      "multipliers": [
+        2.12
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass",
+        "Fighting",
+        "Ground"
+      ],
+      "next_evolution": [
+        {
+          "num": "139",
+          "name": "Omastar"
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "num": "139",
+      "name": "Omastar",
+      "img": "http://www.serebii.net/pokemongo/pokemon/139.png",
+      "type": [
+        "Rock",
+        "Water"
+      ],
+      "height": "0.99 m",
+      "weight": "35.0 kg",
+      "candy": "None",
+      "egg": "Omanyte Candy",
+      "spawn_chance": 0.0061,
+      "avg_spawns": 0.61,
+      "spawn_time": "05:04",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass",
+        "Fighting",
+        "Ground"
+      ],
+      "prev_evolution": [
+        {
+          "num": "138",
+          "name": "Omanyte"
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "num": "140",
+      "name": "Kabuto",
+      "img": "http://www.serebii.net/pokemongo/pokemon/140.png",
+      "type": [
+        "Rock",
+        "Water"
+      ],
+      "height": "0.51 m",
+      "weight": "11.5 kg",
+      "candy": "Kabuto Candy",
+      "candy_count": 50,
+      "egg": "10 km",
+      "spawn_chance": 0.1,
+      "avg_spawns": 10,
+      "spawn_time": "00:05",
+      "multipliers": [
+        1.97,
+        2.37
+      ],
+      "weaknesses": [
+        "Electric",
+        "Grass",
+        "Fighting",
+        "Ground"
+      ],
+      "next_evolution": [
+        {
+          "num": "141",
+          "name": "Kabutops"
+        }
+      ]
+    },
+    {
+      "id": 141,
+      "num": "141",
+      "name": "Kabutops",
+      "img": "http://www.serebii.net/pokemongo/pokemon/141.png",
+      "type": [
+        "Rock",
+        "Water"
+      ],
+      "height": "1.30 m",
+      "weight": "40.5 kg",
+      "candy": "Kabuto Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0032,
+      "avg_spawns": 0.32,
+      "spawn_time": "23:40",
+      "multipliers": null,
+      "weaknesses": [
+        "Electric",
+        "Grass",
+        "Fighting",
+        "Ground"
+      ],
+      "prev_evolution": [
+        {
+          "num": "140",
+          "name": "Kabuto"
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "num": "142",
+      "name": "Aerodactyl",
+      "img": "http://www.serebii.net/pokemongo/pokemon/142.png",
+      "type": [
+        "Rock",
+        "Flying"
+      ],
+      "height": "1.80 m",
+      "weight": "59.0 kg",
+      "candy": "None",
+      "egg": "10 km",
+      "spawn_chance": 0.018,
+      "avg_spawns": 1.8,
+      "spawn_time": "23:40",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Electric",
+        "Ice",
+        "Rock",
+        "Steel"
+      ]
+    },
+    {
+      "id": 143,
+      "num": "143",
+      "name": "Snorlax",
+      "img": "http://www.serebii.net/pokemongo/pokemon/143.png",
+      "type": [
+        "Normal"
+      ],
+      "height": "2.11 m",
+      "weight": "460.0 kg",
+      "candy": "None",
+      "egg": "10 km",
+      "spawn_chance": 0.016,
+      "avg_spawns": 1.6,
+      "spawn_time": "23:40",
+      "multipliers": null,
+      "weaknesses": [
+        "Fighting"
+      ]
+    },
+    {
+      "id": 144,
+      "num": "144",
+      "name": "Articuno",
+      "img": "http://www.serebii.net/pokemongo/pokemon/144.png",
+      "type": [
+        "Ice",
+        "Flying"
+      ],
+      "height": "1.70 m",
+      "weight": "55.4 kg",
+      "candy": "None",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0,
+      "avg_spawns": 0,
+      "spawn_time": "N/A",
+      "multipliers": null,
+      "weaknesses": [
+        "Fire",
+        "Electric",
+        "Rock",
+        "Steel"
+      ]
+    },
+    {
+      "id": 145,
+      "num": "145",
+      "name": "Zapdos",
+      "img": "http://www.serebii.net/pokemongo/pokemon/145.png",
+      "type": [
+        "Electric",
+        "Flying"
+      ],
+      "height": "1.60 m",
+      "weight": "52.6 kg",
+      "candy": "None",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0,
+      "avg_spawns": 0,
+      "spawn_time": "N/A",
+      "multipliers": null,
+      "weaknesses": [
+        "Ice",
+        "Rock"
+      ]
+    },
+    {
+      "id": 146,
+      "num": "146",
+      "name": "Moltres",
+      "img": "http://www.serebii.net/pokemongo/pokemon/146.png",
+      "type": [
+        "Fire",
+        "Flying"
+      ],
+      "height": "2.01 m",
+      "weight": "60.0 kg",
+      "candy": "None",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0,
+      "avg_spawns": 0,
+      "spawn_time": "N/A",
+      "multipliers": null,
+      "weaknesses": [
+        "Water",
+        "Electric",
+        "Rock"
+      ]
+    },
+    {
+      "id": 147,
+      "num": "147",
+      "name": "Dratini",
+      "img": "http://www.serebii.net/pokemongo/pokemon/147.png",
+      "type": [
+        "Dragon"
+      ],
+      "height": "1.80 m",
+      "weight": "3.3 kg",
+      "candy": "Dratini Candy",
+      "candy_count": 25,
+      "egg": "10 km",
+      "spawn_chance": 0.3,
+      "avg_spawns": 30,
+      "spawn_time": "06:41",
+      "multipliers": [
+        1.83,
+        1.84
+      ],
+      "weaknesses": [
+        "Ice",
+        "Dragon",
+        "Fairy"
+      ],
+      "next_evolution": [
+        {
+          "num": "148",
+          "name": "Dragonair"
+        },
+        {
+          "num": "149",
+          "name": "Dragonite"
+        }
+      ]
+    },
+    {
+      "id": 148,
+      "num": "148",
+      "name": "Dragonair",
+      "img": "http://www.serebii.net/pokemongo/pokemon/148.png",
+      "type": [
+        "Dragon"
+      ],
+      "height": "3.99 m",
+      "weight": "16.5 kg",
+      "candy": "Dratini Candy",
+      "candy_count": 100,
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.02,
+      "avg_spawns": 2,
+      "spawn_time": "11:57",
+      "multipliers": [
+        2.05
+      ],
+      "weaknesses": [
+        "Ice",
+        "Dragon",
+        "Fairy"
+      ],
+      "prev_evolution": [
+        {
+          "num": "147",
+          "name": "Dratini"
+        }
+      ],
+      "next_evolution": [
+        {
+          "num": "149",
+          "name": "Dragonite"
+        }
+      ]
+    },
+    {
+      "id": 149,
+      "num": "149",
+      "name": "Dragonite",
+      "img": "http://www.serebii.net/pokemongo/pokemon/149.png",
+      "type": [
+        "Dragon",
+        "Flying"
+      ],
+      "height": "2.21 m",
+      "weight": "210.0 kg",
+      "candy": "Dratini Candy",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0.0011,
+      "avg_spawns": 0.11,
+      "spawn_time": "23:38",
+      "multipliers": null,
+      "weaknesses": [
+        "Ice",
+        "Rock",
+        "Dragon",
+        "Fairy"
+      ],
+      "prev_evolution": [
+        {
+          "num": "147",
+          "name": "Dratini"
+        },
+        {
+          "num": "148",
+          "name": "Dragonair"
+        }
+      ]
+    },
+    {
+      "id": 150,
+      "num": "150",
+      "name": "Mewtwo",
+      "img": "http://www.serebii.net/pokemongo/pokemon/150.png",
+      "type": [
+        "Psychic"
+      ],
+      "height": "2.01 m",
+      "weight": "122.0 kg",
+      "candy": "None",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0,
+      "avg_spawns": 0,
+      "spawn_time": "N/A",
+      "multipliers": null,
+      "weaknesses": [
+        "Bug",
+        "Ghost",
+        "Dark"
+      ]
+    },
+    {
+      "id": 151,
+      "num": "151",
+      "name": "Mew",
+      "img": "http://www.serebii.net/pokemongo/pokemon/151.png",
+      "type": [
+        "Psychic"
+      ],
+      "height": "0.41 m",
+      "weight": "4.0 kg",
+      "candy": "None",
+      "egg": "Not in Eggs",
+      "spawn_chance": 0,
+      "avg_spawns": 0,
+      "spawn_time": "N/A",
+      "multipliers": null,
+      "weaknesses": [
+        "Bug",
+        "Ghost",
+        "Dark"
+      ]
     }
   ]

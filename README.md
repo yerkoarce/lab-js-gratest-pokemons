@@ -150,7 +150,7 @@ In the next a couple of iterations, you will be using your JS knowledge to manip
 
   
 
-Ohh yes! We have our beloved tests, and you already know how this works. Open the `SpecRunner.html` file on your browser and start coding to pass the test. Remember to focus on one test at a time and read carefully the instructions to understand what you have to do. The tests can be found in the `tests/pokemons.spec.js` file.
+Ohh yes! We have our beloved tests, but we have used Jasmine in this lab and not Jest. You don't have to install or run anything using `npm`. Open the `SpecRunner.html` file on your browser with Live Server and voila, that's it, your tests should show up and now you can start coding to pass the tests. Remember to focus on one test at a time and read carefully the instructions to understand what you have to do. The tests can be found in the `tests/pokemons.spec.js` file.
 
   
 

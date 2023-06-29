@@ -1,4 +1,4 @@
-![Root Logo](https://imgur.com/qrIUU8t.png)
+<img src="https://imgur.com/XOS1Vdh.png"  width="150px" height="150px">
 
 # LAB - Greatest Pokemon
 

@@ -53,7 +53,7 @@ describe('the Shortest Pokemon- shortestPokemon', () => {
           height: '0.71 m'
         }
       ])
-    ).toBe('Bellsprout');
+    ).toBe('Machamp');
 
     expect(
       shortestPokemon([
@@ -66,7 +66,7 @@ describe('the Shortest Pokemon- shortestPokemon', () => {
           height: '1.30 m'
         }
       ])
-    ).toBe('Weepinbell');
+    ).toBe('Mr. Mime');
 
     expect(
       shortestPokemon([
@@ -81,7 +81,7 @@ describe('the Shortest Pokemon- shortestPokemon', () => {
       ])
     ).toBe('Weedle');
 
-    expect(shortestPokemon(pokemons)).toBe('Diglett');
+    expect(shortestPokemon(pokemons)).toBe('Muk');
   });
 });
 

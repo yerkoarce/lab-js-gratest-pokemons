@@ -4618,3 +4618,5 @@ let pokemons = [
       ]
     }
   ]
+
+module.exports = pokemons
